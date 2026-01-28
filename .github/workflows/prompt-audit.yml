@@ -1,0 +1,41 @@
+name: Prompt Audit & Validation
+
+on:
+  push:
+    paths:
+      - '.agent/**'
+      - '.github/workflows/prompt-audit.yml'
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1'  # Lundi 6h UTC
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Lint .agent/ structure
+        run: |
+          python scripts/audit_agent_structure.py
+          
+      - name: Validate JSON files
+        run: |
+          for file in .agent/sources/*.json .agent/debug/token-metrics.json; do
+            if [ -f "$file" ]; then
+              python -m json.tool "$file" > /dev/null || echo "Invalid JSON: $file"
+            fi
+          done
+
+      - name: Check for orphaned files
+        run: |
+          python scripts/check_orphaned_files.py
+
+      - name: Verify citations & links
+        run: |
+          python scripts/validate_links.py .agent/

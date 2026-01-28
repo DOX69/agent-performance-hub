@@ -1,0 +1,52 @@
+name: Weekly Source Monitoring
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Lundi 9h UTC
+  workflow_dispatch:
+
+jobs:
+  monitor-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install scraping tools
+        run: |
+          pip install requests feedparser beautifulsoup4
+
+      - name: Check Anthropic Blog
+        run: |
+          python scripts/monitor_anthropic.py
+
+      - name: Check Google AI Docs
+        run: |
+          python scripts/monitor_google_ai.py
+
+      - name: Check Deepseek Releases
+        run: |
+          # gh release list --repo deepseek-ai/DeepSeek-Coder --limit 5 | python scripts/parse_deepseek_releases.py
+          python scripts/parse_deepseek_releases.py
+
+      - name: Check Antigravity Docs
+        run: |
+          python scripts/monitor_antigravity.py
+
+      - name: Archive current sources
+        run: |
+          python scripts/archive_sources.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "Agent Monitor Bot"
+          git config user.email "agent-monitor@noreply.local"
+          if [ -n "$(git status --porcelain .agent/sources/)" ]; then
+            git add .agent/sources/
+            git commit -m "[auto] Update sources - $(date +%Y-%m-%d)"
+            git push
+          fi

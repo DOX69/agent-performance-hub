@@ -1,0 +1,42 @@
+name: Token Metrics & Badge Update
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'  # Lundi 10h UTC
+  workflow_dispatch:
+
+jobs:
+  calculate-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install google-generativeai anthropic
+
+      - name: Calculate Token Efficiency
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python scripts/calc_token_efficiency.py
+
+      - name: Update README Badge
+        run: |
+          python scripts/update_badge.py
+
+      - name: Commit Changes
+        run: |
+          git config user.name "Token Metrics Bot"
+          git config user.email "token-bot@noreply.local"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add README.md .agent/debug/token-metrics.json
+            git commit -m "[auto] Update token efficiency metrics"
+            git push
+          fi
