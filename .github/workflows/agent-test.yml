@@ -47,7 +47,7 @@ jobs:
 
       - name: Run Claude Opus/Sonnet tests
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           echo "Running Claude tests (placeholder)..."
           # pytest tests/test_claude_skills.py -v
