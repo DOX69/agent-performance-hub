@@ -45,8 +45,12 @@ jobs:
         run: |
           pip install anthropic pytest
 
+      # - name: Run Claude Opus/Sonnet tests
+      #   run: |
+      #     echo "Running Claude tests (placeholder - skipped due to missing API key)..."
       - name: Run Claude Opus/Sonnet tests
-        env:
+        if: env.ANTHROPIC_API_KEY != ''
+        # env:
           # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           echo "Running Claude tests (placeholder)..."
