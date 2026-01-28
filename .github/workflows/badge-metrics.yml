@@ -18,12 +18,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install google-generativeai anthropic
+          pip install google-generativeai
 
       - name: Calculate Token Efficiency
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           python scripts/calc_token_efficiency.py
 

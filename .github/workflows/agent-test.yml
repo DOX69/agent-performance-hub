@@ -31,27 +31,3 @@ jobs:
           echo "Running Gemini 3 tests (placeholder)..." 
           # pytest tests/test_gemini_skills.py -v
 
-  test-claude:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          pip install anthropic pytest
-
-      # - name: Run Claude Opus/Sonnet tests
-      #   run: |
-      #     echo "Running Claude tests (placeholder - skipped due to missing API key)..."
-      - name: Run Claude Opus/Sonnet tests
-        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          echo "Running Claude tests (placeholder)..."
-          # pytest tests/test_claude_skills.py -v

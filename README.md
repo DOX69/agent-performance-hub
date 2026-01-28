@@ -7,9 +7,9 @@
 ## 🎯 Overview
 
 AGENT-PERFORMANCE-HUB est un dépôt privé structurant les ressources optimales 
-pour interagir avec Gemini 3 et Claude Opus/Sonnet via context engineering avancé.
+pour interagir avec Gemini 3 (via Google AI Studio) via context engineering avancé.
 
-**Modèles cibles**: Gemini 3, Claude Opus, Claude Sonnet  
+**Modèles cibles**: Gemini 3 (Primary)
 **Scope**: Tous les stacks (Python, TypeScript, Go, Rust, Java, DevOps, etc.)  
 **Objectif**: -40% tokens, 80%+ autonomie agents, <15min setup
 

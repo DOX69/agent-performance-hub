@@ -18,18 +18,6 @@ Required for: **Gemini 3 testing** and **Token Benchmarking**.
 4.  **Secret**: *Paste your key here*.
 5.  Click **Add secret**.
 
-## 2. Anthropic API Key (Optional)
-Required for: **Claude testing** (If you don't have one, the workflows will skip these steps).
-
-**How to get it:**
-1.  Go to [Anthropic Console](https://console.anthropic.com/).
-2.  Sign up/Login and go to **API Keys**.
-3.  Create a new key.
-
-**How to add to GitHub:**
-1.  Follow the same steps as above.
-2.  **Name**: `ANTHROPIC_API_KEY`
-3.  **Secret**: *Paste your key here*.
 
 ## 3. Other Secrets
 - `CTX7_API_KEY`: If using Context7 features in CI.

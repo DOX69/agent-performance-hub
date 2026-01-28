@@ -19,9 +19,6 @@ def count_tokens_gemini(prompt: str) -> int:
     # response = model.count_tokens(prompt)
     return len(prompt.split()) * 1.3 # Rough estimate
 
-def count_tokens_claude(prompt: str) -> int:
-    """Mock Count tokens for Claude Opus."""
-    return len(prompt.split()) * 1.3
 
 def main():
     # Mock data for demonstration if files don't exist
@@ -37,12 +34,9 @@ def main():
     baseline_tokens_gemini = count_tokens_gemini(baseline_prompt)
     optimized_tokens_gemini = count_tokens_gemini(optimized_prompt)
     
-    baseline_tokens_claude = count_tokens_claude(baseline_prompt)
-    optimized_tokens_claude = count_tokens_claude(optimized_prompt)
-    
     # Calculer efficacité
-    avg_baseline = (baseline_tokens_gemini + baseline_tokens_claude) / 2
-    avg_optimized = (optimized_tokens_gemini + optimized_tokens_claude) / 2
+    avg_baseline = baseline_tokens_gemini
+    avg_optimized = optimized_tokens_gemini
     
     if avg_baseline == 0:
         efficiency = 0
@@ -57,9 +51,7 @@ def main():
         "optimized_tokens": int(avg_optimized),
         "reduction_percentage": round(efficiency, 1),
         "gemini_baseline": baseline_tokens_gemini,
-        "gemini_optimized": optimized_tokens_gemini,
-        "claude_baseline": baseline_tokens_claude,
-        "claude_optimized": optimized_tokens_claude
+        "gemini_optimized": optimized_tokens_gemini
     }
     
     Path('.agent/debug/token-metrics.json').write_text(
