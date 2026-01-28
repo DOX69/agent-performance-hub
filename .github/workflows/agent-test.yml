@@ -49,9 +49,9 @@ jobs:
       #   run: |
       #     echo "Running Claude tests (placeholder - skipped due to missing API key)..."
       - name: Run Claude Opus/Sonnet tests
-        if: env.ANTHROPIC_API_KEY != ''
-        # env:
-          # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           echo "Running Claude tests (placeholder)..."
           # pytest tests/test_claude_skills.py -v
