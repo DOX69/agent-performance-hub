@@ -1,7 +1,9 @@
 {
-  "date": "2026-01-28",
-  "token_efficiency": 0.0,
-  "baseline_tokens": 0,
-  "with_agent_tokens": 0,
-  "reduction_percentage": 0.0
+  "date": "2026-01-29T19:43:05.040591",
+  "token_efficiency": 67.7,
+  "baseline_tokens": 341,
+  "optimized_tokens": 110,
+  "reduction_percentage": 67.7,
+  "gemini_baseline": 341.90000000000003,
+  "gemini_optimized": 110.5
 }

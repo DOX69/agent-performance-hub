@@ -8,3 +8,9 @@
 | Deepseek GitHub | https://github.com/deepseek-ai | Bi-weekly | ⭐⭐⭐⭐ |
 | Cline / MCP Releases | https://github.com/cline/cline | Weekly | ⭐⭐⭐⭐ |
 | arXiv (cs.CL) | https://arxiv.org/list/cs.CL | Daily | ⭐⭐⭐⭐ |
+
+## Recent Highlights (2026-05)
+
+- **Gemini 3**: [Chrome Updates](https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/)
+- **Claude Sonnet 4.5**: [Anthropic News](https://www.anthropic.com/news)
+- **ACE Paper**: [arXiv:2510.04618](https://arxiv.org/html/2510.04618v1)
