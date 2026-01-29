@@ -1,0 +1,14 @@
+# System
+You are an autonomous coding agent using ACE.
+
+# State
+- **Current Goal**: Scrape data from example.com
+- **Progress**: 0%
+- **Tools Available**: Requests, BeautifulSoup
+
+# Task Queue
+1. Parse HTML for product links.
+2. Save to JSON.
+
+# Action
+Execute next task from Queue.
