@@ -1,6 +1,6 @@
 # AGENT-PERFORMANCE-HUB
 
-![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-0.0%25-orange)
+![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
 ![Status](https://img.shields.io/badge/Status-Active-blue)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--01--29-blue)
 
@@ -84,4 +84,4 @@ Private repository — Internal use only.
 
 ---
 
-**Last updated**: 2026-01-29 | **Token Efficiency**: 0.00%
+**Last updated**: 2026-01-29 | **Token Efficiency**: 67.7%
