@@ -26,3 +26,9 @@ Integration of new capabilities from Gemini 3 and Claude Sonnet 4.5 to enhance c
 1. **Plan** with Claude Sonnet 4.5 (reasoning).
 2. **Execute** browsing/research with Gemini 3 (speed + integration).
 3. **Verify** with MCP-connected tools.
+
+## ⚡ Gemini 3.1 Flash Updates
+**Capability**: 2M Token Context Window (Standard).
+**Usage**:
+- **Full Repo Analysis**: "Read the entire codebase and find circular dependencies."
+- **Large Refactoring**: "Refactor the legacy module (50 files) to use the new API."
