@@ -19,3 +19,9 @@
 - **Gemini 3**: [Chrome Updates](https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/)
 - **Claude Sonnet 4.5**: [Anthropic News](https://www.anthropic.com/news)
 - **ACE Paper**: [arXiv:2510.04618](https://arxiv.org/html/2510.04618v1)
+
+## Recent Highlights (2026-02)
+
+- **Gemini 3.1**: [Infinite Context](https://blog.google/technology/ai/gemini-3-1-infinite-context)
+- **Claude 4 Beta**: [Reasoning Update](https://www.anthropic.com/research/claude-4-beta)
+- **MCP 1.5**: [Release Notes](https://modelcontextprotocol.io/blog/release-1-5)
