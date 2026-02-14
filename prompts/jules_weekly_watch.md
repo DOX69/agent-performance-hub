@@ -12,6 +12,7 @@
 You must actively check the following sources for updates related to **Gemini 3**, **Claude Sonnet/Opus**, **MCP**, and **Agentic Coding**:
 - **Official Blogs**: Anthropic Research, Google DeepMind / AI.
 - **GitHub Trending**: Repositories like `cline`, `antigravity`, `langchain`, `semantic-kernel`.
+- **Awesome Skills**: [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) (Critical source for continuous improvement).
 - **Community**: Twitter/X key influencers (if accessible via tools), Reddit r/LocalLLaMA, r/MachineLearning.
 - **arXiv**: New papers on "Context Optimization", "Prompt Engineering", "Large Context Window handling".
 
