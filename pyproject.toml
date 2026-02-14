@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aph"
+version = "0.1.0"
+description = "Agent Performance Hub — CLI tool for managing AI agent skills across your projects"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Mickaël RAKOTOARINIVO", email = "dox69@users.noreply.github.com"},
+]
+keywords = ["ai", "agent", "skills", "context-engineering", "gemini", "claude"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+aph = "aph.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/DOX69/agent-performance-hub"
+Repository = "https://github.com/DOX69/agent-performance-hub"
+Issues = "https://github.com/DOX69/agent-performance-hub/issues"
+
+[tool.setuptools.packages.find]
+include = ["aph*"]
+
+[tool.setuptools.package-data]
+aph = ["**/*"]
+
+[tool.setuptools]
+include-package-data = true

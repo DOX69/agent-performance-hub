@@ -37,10 +37,41 @@ For every potential update, ask:
 
 **Step C: Verification**
 - Run the benchmark script `python scripts/calc_token_efficiency.py` to see if new patterns differ from baselines.
+- Run `python -m pytest tests/ -v` to ensure all APH package tests pass. **Do NOT proceed to Step D if any test fails.** Fix failing tests first.
 
 **Step D: Reporting**
 - Generate a summary PR with the title: `chore(watch): Weekly updates [YYYY-WW]`.
-- Description: "Analyzed X sources. Added Y new insights. Updated Z skills."
+- Description: "Analyzed X sources. Added Y new insights. Updated Z skills. APH registry: N total skills."
+
+**Step E: APH Package Maintenance (CRITICAL)**
+This step ensures the `aph` CLI package stays up-to-date and functional.
+
+1. **Regenerate the skill registry**:
+   ```bash
+   python scripts/generate_registry.py
+   ```
+   This scans all `.agent/skills/*/SKILL.md` and rebuilds `skills_registry.json`.
+
+2. **Run the full test suite**:
+   ```bash
+   python -m pytest tests/ -v --tb=short
+   ```
+   All 110+ tests MUST pass. If any test fails, fix it before continuing.
+
+3. **Smoke test the CLI**:
+   ```bash
+   pip install -e .
+   aph version
+   aph list | head -20
+   ```
+
+4. **Version bump** (only if new skills were added this week):
+   - Bump the patch version in `pyproject.toml` and `aph/__init__.py`
+   - Example: `0.1.0` → `0.1.1`
+
+5. **Include in PR description**:
+   - "APH Registry: X total skills across Y categories"
+   - List any newly added or modified skills
 
 ---
 
