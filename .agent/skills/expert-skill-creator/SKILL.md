@@ -6,7 +6,7 @@ tags:
   - meta-skill
   - skill-authoring
   - context-engineering
-  - ant-gravity
+  - antigravity
 visibility: private
 inputs:
   - name: user_query

@@ -205,12 +205,19 @@ This repo is maintained weekly by **Jules** (automated agent):
 
 ---
 
+## 🤝 Collaboration
+
+I'm open to collaboration on agentic workflows, skill development, and AI performance optimization.
+
+To collaborate, discuss new features, or request access, feel free to reach out:
+- **LinkedIn**: [Mickaël Rakotoarinivo](https://www.linkedin.com/in/mickael-rakotoarinivo)
+
+---
+
 ## ⚖️ License
 
 Private repository — access by invitation only.
 
-To request access, contact the repository owner.
-
 ---
 
-**Last updated**: 2026-02-14 | **aph** v0.1.0
+**Last updated**: 2026-02-15 | **aph** v0.1.0
