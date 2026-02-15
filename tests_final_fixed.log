@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.12, pytest-9.0.2, pluggy-1.6.0
+rootdir: /app
+configfile: pyproject.toml
+collected 110 items
+
+tests/test_cli.py .............................                          [ 26%]
+tests/test_config.py ...........                                         [ 36%]
+tests/test_generate_registry.py ...................                      [ 53%]
+tests/test_installer.py .............................                    [ 80%]
+tests/test_registry.py ......................                            [100%]
+
+============================= 110 passed in 1.59s ==============================

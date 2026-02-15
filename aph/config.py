@@ -5,9 +5,21 @@ from pathlib import Path
 # ─── Package Paths ────────────────────────────────────────────────────────────
 # The directory where this file resides (the aph package directory)
 PACKAGE_DIR = Path(__file__).parent.resolve()
+REPO_ROOT = PACKAGE_DIR.parent
 
-# The bundled resources directory inside the package
-BUNDLED_DIR = PACKAGE_DIR / "bundled"
+# Determine where the bundled resources are located
+# 1. Check for 'bundled' directory inside the package (installed mode)
+if (PACKAGE_DIR / "bundled").exists():
+    BUNDLED_DIR = PACKAGE_DIR / "bundled"
+    SKILLS_REGISTRY_FILE = BUNDLED_DIR / "skills_registry.json"
+# 2. Fallback to repo root .agent (development/test mode)
+elif (REPO_ROOT / ".agent").exists():
+    BUNDLED_DIR = REPO_ROOT / ".agent"
+    SKILLS_REGISTRY_FILE = REPO_ROOT / "skills_registry.json"
+else:
+    # Fallback to allow import but commands might fail
+    BUNDLED_DIR = PACKAGE_DIR / "bundled"
+    SKILLS_REGISTRY_FILE = BUNDLED_DIR / "skills_registry.json"
 
 # The bundled skills directory inside the package
 BUNDLED_SKILLS_DIR = BUNDLED_DIR / "skills"
@@ -18,8 +30,6 @@ BUNDLED_METHODOLOGY_DIR = BUNDLED_DIR / "methodology"
 BUNDLED_DEBUG_DIR = BUNDLED_DIR / "debug"
 BUNDLED_SOURCES_DIR = BUNDLED_DIR / "sources"
 
-# Skills registry file
-SKILLS_REGISTRY_FILE = BUNDLED_DIR / "skills_registry.json"
 
 # ─── Target Project Paths ─────────────────────────────────────────────────────
 AGENT_DIR_NAME = ".agent"

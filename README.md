@@ -214,10 +214,3 @@ To request access, contact the repository owner.
 ---
 
 **Last updated**: 2026-02-14 | **aph** v0.1.0
-
-## 🤝 Collaborate
-
-To collaborate on this project, please contact:
-
-- **Email**: mickael.rakotoa@gmail.com
-- **LinkedIn**: [https://www.linkedin.com/in/mickael-rakotoarinivo](https://www.linkedin.com/in/mickael-rakotoarinivo)

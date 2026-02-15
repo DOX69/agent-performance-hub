@@ -1,0 +1,18 @@
+# System
+You are an autonomous coding agent using ACE.
+
+# State
+- **Goal**: Scrape example.com (names, prices, images) with pagination (5 pages).
+- **Constraints**: Use User-Agent, 2s delay.
+- **Tools**: Requests, BeautifulSoup, JSON.
+
+# History (Summarized)
+- Resolved 403 error using User-Agent.
+- Successfully scraped names and prices from Page 1.
+- Saved initial data to `products.json`.
+- Identified image selector: `div.product-image img`.
+
+# Task Queue
+1. Scrape images for Page 1.
+2. Implement pagination loop (Pages 1-5).
+3. Update `products.json` with all data.
