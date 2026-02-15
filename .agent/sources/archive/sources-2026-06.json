@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-06-04",
+    "source": "Anthropic Research Blog",
+    "title": "Claude 3.7 Release Notes",
+    "url": "https://www.anthropic.com/news/claude-3-7",
+    "analysis": "Supports native mermaid graph rendering. Reduced tokens for visual outputs.",
+    "impact": "New Skill: Visualization",
+    "status": "Actioned"
+  },
+  {
+    "date": "2026-06-04",
+    "source": "Google DeepMind",
+    "title": "Gemini 3.1 Flash Updates",
+    "url": "https://blog.google/technology/ai/gemini-3-1-flash",
+    "analysis": "2M context window standard. Faster JSON mode.",
+    "impact": "Update Code Generation Skill",
+    "status": "Actioned"
+  }
+]

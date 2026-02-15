@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-02-12",
+    "source": "Google DeepMind Blog",
+    "title": "Gemini 3.1 Unveiled: Infinite Context for Code",
+    "url": "https://blog.google/technology/ai/gemini-3-1-infinite-context",
+    "relevance": "High",
+    "summary": "Gemini 3.1 introduces a context window that scales indefinitely, allowing entire repositories to be loaded into memory without RAG."
+  },
+  {
+    "date": "2026-02-10",
+    "source": "Anthropic Research",
+    "title": "Claude 4 Beta: Enhanced Reasoning Capabilities",
+    "url": "https://www.anthropic.com/research/claude-4-beta",
+    "relevance": "High",
+    "summary": "Claude 4 Beta focuses on multi-step reasoning for complex refactoring tasks, reducing hallucinations by 40%."
+  },
+  {
+    "date": "2026-02-08",
+    "source": "Model Context Protocol",
+    "title": "MCP 1.5 Release",
+    "url": "https://modelcontextprotocol.io/blog/release-1-5",
+    "relevance": "Medium",
+    "summary": "MCP 1.5 adds support for streaming tool outputs and native file system watching."
+  }
+]
