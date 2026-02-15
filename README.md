@@ -56,6 +56,14 @@ aph add docker-expert         # Install a skill
 | `aph info <skill>` | Show detailed info about a skill |
 | `aph version` | Show CLI version |
 
+> [!TIP]
+> **Agent-friendly help** — Every command supports `--help` (or `-h`) with structured output designed for both humans and AI agents. Each help page includes **PURPOSE**, **USAGE**, **EXIT_CODES**, **PRECONDITIONS**, and **EXAMPLES** sections, so an agent can programmatically understand what a command does, what it expects, and how to handle errors.
+>
+> ```bash
+> aph add --help    # See structured help for any command
+> aph -h            # Short flag works too
+> ```
+
 ---
 
 ## 📦 What Gets Created
