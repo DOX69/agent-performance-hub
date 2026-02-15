@@ -39,37 +39,61 @@ class TestHelp:
         assert result.exit_code == 0
         assert "APH" in result.output
         assert "Agent Performance Hub" in result.output
+        assert "PURPOSE:" in result.output
+        assert "USAGE:" in result.output
+        assert "EXIT_CODES:" in result.output
+        assert "EXAMPLES:" in result.output
+
+    def test_main_help_short_flag(self, runner):
+        """Verify -h works as alias for --help."""
+        result = runner.invoke(main, ["-h"])
+        assert result.exit_code == 0
+        assert "Agent Performance Hub" in result.output
 
     def test_init_help(self, runner):
         result = runner.invoke(main, ["init", "--help"])
         assert result.exit_code == 0
+        assert "PURPOSE:" in result.output
+        assert "PRECONDITIONS:" in result.output
         assert "--skills" in result.output
 
     def test_list_help(self, runner):
         result = runner.invoke(main, ["list", "--help"])
         assert result.exit_code == 0
+        assert "PURPOSE:" in result.output
         assert "--installed" in result.output
         assert "--category" in result.output
 
     def test_add_help(self, runner):
         result = runner.invoke(main, ["add", "--help"])
         assert result.exit_code == 0
+        assert "PURPOSE:" in result.output
+        assert "ARGUMENTS:" in result.output
+        assert "PRECONDITIONS:" in result.output
 
     def test_search_help(self, runner):
         result = runner.invoke(main, ["search", "--help"])
         assert result.exit_code == 0
+        assert "PURPOSE:" in result.output
+        assert "ARGUMENTS:" in result.output
 
     def test_remove_help(self, runner):
         result = runner.invoke(main, ["remove", "--help"])
         assert result.exit_code == 0
+        assert "PURPOSE:" in result.output
+        assert "--force" in result.output
 
     def test_update_help(self, runner):
         result = runner.invoke(main, ["update", "--help"])
         assert result.exit_code == 0
+        assert "PURPOSE:" in result.output
+        assert "ARGUMENTS:" in result.output
 
     def test_info_help(self, runner):
         result = runner.invoke(main, ["info", "--help"])
         assert result.exit_code == 0
+        assert "PURPOSE:" in result.output
+        assert "OUTPUT:" in result.output
 
 
 class TestInit:

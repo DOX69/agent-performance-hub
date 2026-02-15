@@ -41,12 +41,35 @@ from .registry import (
 console = Console()
 
 
-@click.group()
+@click.group(context_settings={"help_option_names": ["-h", "--help"], "max_content_width": 120})
 def main():
     """🚀 APH — Agent Performance Hub
 
+    PURPOSE:
     Manage AI agent skills across your projects.
     Install curated skills for Gemini, Claude, and other AI agents.
+    
+    USAGE:
+    aph [COMMAND] [ARGS]...
+    
+    COMMANDS:
+    init                Initialize .agent/ with core skills
+    list                List available skills (remote or installed)
+    search              Search skills by name, specific tags, or description
+    add                 Install one or more skills
+    remove              Remove a skill
+    update              Update installed skills
+    info                Show detailed info about a skill
+    version             Show APH version
+    
+    EXIT_CODES:
+    0 = Success
+    1 = Error (e.g., project not initialized, skill not found)
+    
+    EXAMPLES:
+    aph init
+    aph list --category devops
+    aph add docker-expert
     """
     pass
 
@@ -55,7 +78,20 @@ def main():
 
 @main.command()
 def version():
-    """Show APH version."""
+    """Show APH version.
+
+    PURPOSE:
+    Display the currently installed version of APH CLI.
+
+    USAGE:
+    aph version
+
+    OUTPUT:
+    Text: aph v<version>
+
+    EXIT_CODES:
+    0 = Success
+    """
     console.print(f"[bold cyan]aph[/] v{__version__}")
 
 
@@ -70,11 +106,29 @@ def version():
 def init(skills):
     """Initialize .agent/ with core skills in the current project.
 
-    By default, installs these core skills:
-    brainstorming, git-pushing, expert-skill-creator, clean-code,
-    systematic-debugging, verification-before-completion.
+    PURPOSE:
+    Scaffolds the .agent directory structure and installs default core skills.
+    Must be run once per project before using other commands.
 
-    Override with: aph init --skills brainstorming,docker-expert
+    USAGE:
+    aph init [OPTIONS]
+
+    OPTIONS:
+    --skills <list>     Comma-separated list of skills to install instead of defaults.
+
+    OUTPUT:
+    Status messages indicating created directories and installed skills.
+
+    EXIT_CODES:
+    0 = Success
+    1 = Error (Project already initialized or installation failed)
+
+    PRECONDITIONS:
+    Current directory must not already contain a valid .agent configuration.
+
+    EXAMPLES:
+    aph init
+    aph init --skills brainstorming,docker-expert
     """
     console.print()
     console.print(
@@ -109,9 +163,27 @@ def init(skills):
 def list_skills(installed, category):
     """List available skills.
 
-    Shows all skills from the registry with name, category, and description.
-    Use --installed to show only skills installed in the current project.
-    Use --category to filter by a specific category.
+    PURPOSE:
+    Browse the skills registry or view installed skills.
+
+    USAGE:
+    aph list [OPTIONS]
+
+    OPTIONS:
+    --installed     Show ONLY skills currently installed in this project.
+    --category <name>   Filter skills by category (e.g., 'devops', 'frontend').
+
+    OUTPUT:
+    Table with columns: Status (✅/empty), Skill Name, Category, Description.
+
+    EXIT_CODES:
+    0 = Success
+    1 = Error (Project not initialized when using --installed)
+
+    EXAMPLES:
+    aph list
+    aph list --installed
+    aph list --category security
     """
     if installed:
         if not is_initialized():
@@ -177,7 +249,24 @@ def list_skills(installed, category):
 def search(query):
     """Search skills by name, description, or tags.
 
-    Example: aph search docker
+    PURPOSE:
+    Find skills matching a keyword.
+
+    USAGE:
+    aph search <query>
+
+    ARGUMENTS:
+    query   Search term (case-insensitive).
+
+    OUTPUT:
+    Table of matching skills.
+
+    EXIT_CODES:
+    0 = Success (even if no matches found)
+
+    EXAMPLES:
+    aph search docker
+    aph search "react patterns"
     """
     results = search_skills(query)
 
@@ -221,10 +310,32 @@ def search(query):
 def add(skills, category):
     """Install one or more skills.
 
-    Examples:
-        aph add docker-expert
-        aph add docker-expert nestjs-expert playwright-skill
-        aph add --category frontend
+    PURPOSE:
+    Add new skills to the current project.
+
+    USAGE:
+    aph add [OPTIONS] [SKILLS]...
+
+    ARGUMENTS:
+    skills  One or more skill names to install.
+
+    OPTIONS:
+    --category <name>   Install ALL skills from this category (overrides skill list).
+
+    OUTPUT:
+    Success/failure status for each installed skill.
+
+    EXIT_CODES:
+    0 = Success
+    1 = Error (Project not initialized or no skills found in category)
+
+    PRECONDITIONS:
+    Project must be initialized with 'aph init'.
+
+    EXAMPLES:
+    aph add docker-expert
+    aph add docker-expert nestjs-expert
+    aph add --category frontend
     """
     if not is_initialized():
         console.print("[red]Project not initialized. Run 'aph init' first.[/]")
@@ -261,7 +372,28 @@ def add(skills, category):
 def remove(skill_name, force):
     """Remove a skill from the project.
 
-    Example: aph remove docker-expert
+    PURPOSE:
+    Delete an installed skill from .agent/skills/.
+
+    USAGE:
+    aph remove [OPTIONS] <skill_name>
+
+    ARGUMENTS:
+    skill_name  Name of the skill to remove.
+
+    OPTIONS:
+    --force     Skip confirmation prompt.
+
+    OUTPUT:
+    Success/failure message.
+
+    EXIT_CODES:
+    0 = Success
+    1 = Error (Project not initialized or skill not installed)
+
+    EXAMPLES:
+    aph remove docker-expert
+    aph remove --force docker-expert
     """
     if not is_initialized():
         console.print("[red]Project not initialized.[/]")
@@ -286,12 +418,25 @@ def remove(skill_name, force):
 def update(skill_name):
     """Update installed skills to the latest version.
 
-    Without arguments, updates all installed skills.
-    With a skill name, updates only that skill.
+    PURPOSE:
+    Update one or all skills from the registry.
 
-    Examples:
-        aph update              — Update all
-        aph update docker-expert — Update one
+    USAGE:
+    aph update [SKILL_NAME]
+
+    ARGUMENTS:
+    skill_name  (Optional) Specific skill to update. If omitted, updates ALL.
+
+    OUTPUT:
+    Status for each updated skill.
+
+    EXIT_CODES:
+    0 = Success
+    1 = Error (Project not initialized or skill not installed)
+
+    EXAMPLES:
+    aph update                (Updates all skills)
+    aph update docker-expert  (Updates only docker-expert)
     """
     if not is_initialized():
         console.print("[red]Project not initialized. Run 'aph init' first.[/]")
@@ -320,7 +465,24 @@ def update(skill_name):
 def info(skill_name):
     """Show detailed information about a skill.
 
-    Example: aph info docker-expert
+    PURPOSE:
+    View metadata, description, and installation status of a skill.
+
+    USAGE:
+    aph info <skill_name>
+
+    ARGUMENTS:
+    skill_name  Name of the skill to view.
+
+    OUTPUT:
+    Panel with Name, Category, Tags, Core status, Size, and Description.
+
+    EXIT_CODES:
+    0 = Success
+    1 = Error (Skill not found)
+
+    EXAMPLES:
+    aph info docker-expert
     """
     skill = get_skill_by_name(skill_name)
 
@@ -361,3 +523,4 @@ def info(skill_name):
 
 if __name__ == "__main__":
     main()
+
