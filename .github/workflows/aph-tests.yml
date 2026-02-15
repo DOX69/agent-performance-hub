@@ -1,0 +1,72 @@
+name: APH Registry & Tests
+
+on:
+  push:
+    paths:
+      - '.agent/skills/**'
+      - 'aph/**'
+      - 'tests/**'
+      - 'scripts/generate_registry.py'
+  pull_request:
+    paths:
+      - '.agent/skills/**'
+      - 'aph/**'
+      - 'tests/**'
+  schedule:
+    - cron: '0 7 * * 1'  # Monday 7h UTC
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run APH Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install package
+        run: |
+          pip install -e .
+          pip install pytest
+
+      - name: Run tests
+        run: |
+          python -m pytest tests/ -v --tb=short
+
+      - name: Smoke test CLI
+        run: |
+          aph version
+          aph list | head -10
+
+  update-registry:
+    name: Update Skills Registry
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate registry
+        run: |
+          python scripts/generate_registry.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "APH Registry Bot"
+          git config user.email "aph-bot@noreply.local"
+          if [ -n "$(git status --porcelain skills_registry.json)" ]; then
+            git add skills_registry.json
+            git commit -m "[auto] Update skills registry - $(date +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to registry"
+          fi

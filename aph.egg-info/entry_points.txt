@@ -1,0 +1,2 @@
+[console_scripts]
+aph = aph.cli:main

@@ -18,13 +18,27 @@ from pathlib import Path
 SKILL_TEMPLATE = """---
 name: {skill_name}
 description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+version: "1.0.0"
+tags:
+  - {skill_name}
+  - [TODO: Add relevant tags]
+# visibility: private  # Set to 'public' if sharing widely
+# inputs:
+#   - name: user_query
+#     description: ...
+#     required: true
+# outputs:
+#   - name: response
+#     description: ...
+#     schema: markdown
 ---
 
 # {skill_title}
 
 ## Overview
 
-[TODO: 1-2 sentences explaining what this skill enables]
+[TODO: 1-2 sentences explaining what this skill enables.
+Remember **Context Engineering** principles: keep it concise, maximize signal-to-noise, and use progressive disclosure.]
 
 ## Structuring This Skill
 

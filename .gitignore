@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Configuration
+.env
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+junit/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# APH Generated
+.aph-manifest.json

@@ -1,10 +1,33 @@
+Metadata-Version: 2.4
+Name: aph
+Version: 0.1.0
+Summary: Agent Performance Hub — CLI tool for managing AI agent skills across your projects
+Author-email: Mickaël RAKOTOARINIVO <dox69@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/DOX69/agent-performance-hub
+Project-URL: Repository, https://github.com/DOX69/agent-performance-hub
+Project-URL: Issues, https://github.com/DOX69/agent-performance-hub/issues
+Keywords: ai,agent,skills,context-engineering,gemini,claude
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1
+Requires-Dist: rich>=13.0
+Requires-Dist: pyyaml>=6.0
+
 # 🚀 APH — Agent Performance Hub
 
 ![Tests](https://img.shields.io/badge/Tests-110%20passed-brightgreen)
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
 ![Skills](https://img.shields.io/badge/Skills-241-blue)
 ![Status](https://img.shields.io/badge/Status-Private-orange)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--12-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**
 
@@ -56,14 +79,6 @@ aph add docker-expert         # Install a skill
 | `aph update <skill>` | Update a specific skill |
 | `aph info <skill>` | Show detailed info about a skill |
 | `aph version` | Show CLI version |
-
-> [!TIP]
-> **Agent-friendly help** — Every command supports `--help` (or `-h`) with structured output designed for both humans and AI agents. Each help page includes **PURPOSE**, **USAGE**, **EXIT_CODES**, **PRECONDITIONS**, and **EXAMPLES** sections, so an agent can programmatically understand what a command does, what it expects, and how to handle errors.
->
-> ```bash
-> aph add --help    # See structured help for any command
-> aph -h            # Short flag works too
-> ```
 
 ---
 
@@ -214,19 +229,12 @@ This repo is maintained weekly by **Jules** (automated agent):
 
 ---
 
-## 🤝 Collaboration
-
-I'm open to collaboration on agentic workflows, skill development, and AI performance optimization.
-
-To collaborate, discuss new features, or request access, feel free to reach out:
-- **LinkedIn**: [Mickaël Rakotoarinivo](https://www.linkedin.com/in/mickael-rakotoarinivo)
-
----
-
 ## ⚖️ License
 
 Private repository — access by invitation only.
 
+To request access, contact the repository owner.
+
 ---
 
-**Last updated**: 2026-02-15 | **aph** v0.1.0
+**Last updated**: 2026-02-14 | **aph** v0.1.0
