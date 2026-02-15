@@ -9,7 +9,7 @@ from aph.config import (
     CORE_SKILLS,
     INIT_SUBDIRS,
     MANIFEST_FILE,
-    PACKAGE_ROOT,
+    PACKAGE_DIR,
     SKILLS_REGISTRY_FILE,
     SKILLS_SUBDIR,
 )
@@ -18,10 +18,10 @@ from aph.config import (
 class TestPackagePaths:
     """Verify that package paths resolve correctly."""
 
-    def test_package_root_exists(self):
-        """PACKAGE_ROOT should point to the repo root."""
-        assert PACKAGE_ROOT.exists()
-        assert (PACKAGE_ROOT / "pyproject.toml").exists()
+    def test_package_dir_exists(self):
+        """PACKAGE_DIR should point to the aph package directory."""
+        assert PACKAGE_DIR.exists()
+        assert (PACKAGE_DIR / "__init__.py").exists()
 
     def test_bundled_skills_dir_exists(self):
         """Bundled .agent/skills/ must exist for the CLI to work."""
