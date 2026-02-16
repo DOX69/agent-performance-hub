@@ -144,6 +144,12 @@ Since this is a private repo, you'll need to authenticate.
 - **HTTPS (Recommended)**: Use a GitHub Personal Access Token (PAT) or Git Credential Manager.
 - **SSH (Alternative)**: Ensure your SSH key is added to GitHub.
 
+### 💡 Troubleshooting: "command not found"
+If `aph` is not recognized after installation:
+1. **Try the fallback**: Use `python -m aph` instead of `aph`.
+2. **Fix your PATH**: Ensure your Python Scripts directory is in your system's `PATH`.
+   - On Windows, it usually looks like: `%AppData%\Local\Packages\Python...\LocalCache\local-packages\Python311\Scripts`
+
 ```bash
 # Check if you have an SSH key
 ls ~/.ssh/id_ed25519.pub
