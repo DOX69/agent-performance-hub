@@ -42,6 +42,9 @@ SOURCES_SUBDIR = "sources"
 # Manifest file tracking installed skills
 MANIFEST_FILE = ".aph-manifest.json"
 
+# Agent-facing README explaining how to use APH
+README_AGENT_FILE = "README_AGENT.md"
+
 # ─── Core Skills ──────────────────────────────────────────────────────────────
 # These are installed by default with `aph init`
 CORE_SKILLS = [

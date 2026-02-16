@@ -18,9 +18,50 @@ from .config import (
     KNOWLEDGE_SUBDIR,
     MANIFEST_FILE,
     METHODOLOGY_SUBDIR,
+    README_AGENT_FILE,
     SKILLS_SUBDIR,
     SOURCES_SUBDIR,
 )
+
+README_AGENT_CONTENT = """# 🤖 Agent Performance Hub (APH) — Agent Guide
+
+Welcome, Agent. This project uses **APH** to manage your specialized skills and project context. You are fully autonomous to search, add, and use skills in this project using the `aph` CLI.
+
+## 🚀 Core Capabilities
+This project is equipped with **240+ skills** across categories like Security, AI Agents, Marketing, Frontend, DevOps, and more.
+
+### 🔍 Explore & Search
+- `aph list` — List all available skills in the registry.
+- `aph list --category <name>` — Filter skills by category (e.g., `security`, `ai-agents`).
+- `aph search <query>` — Search by name, description, or tags (e.g., `aph search stripe`).
+- `aph info <skill>` — View purpose, usage, and examples for a specific skill.
+
+### 📦 Installation & Management
+- `aph add <skill>` — Install a skill into `.agent/skills/`.
+- `aph remove <skill>` — Remove an unneeded skill.
+- `aph update` — Update all installed skills to the latest version.
+- `aph update <skill>` — Update a specific skill.
+
+### 🛠️ Reference & Execution
+- `aph --help` or `aph -h` — Global help.
+- `aph <command> --help` — Detailed structured help for any command.
+
+## 📁 Project Structure
+The `.agent/` directory is your brain:
+- `skills/` — Actionable instructions (`SKILL.md`) for specific tasks.
+- `knowledge/` — Project context, architecture, and tech stack references.
+- `methodology/` — Core reasoning and workflow patterns.
+- `debug/` — Error patterns and benchmarks.
+
+## 💡 How to Perform at your Best
+1. **Be Proactive**: If you lack expertise for a task (e.g., "Set up a Stripe webhook"), `aph search stripe` and `aph add stripe-integration` immediately.
+2. **Read the Docs**: After installing a skill, read its `SKILL.md`. It contains optimized instructions designed for agents.
+3. **Use the Help**: Every `aph` command provides **PURPOSE**, **USAGE**, and **EXAMPLES** structured for AI agents. When in doubt, run `aph <command> --help`.
+4. **Follow Methodology**: Check `.agent/methodology/` to understand the project's preferred reasoning style before making major changes.
+
+---
+*APH v0.1.0 — Empowering autonomous agents with the right skills at the right time.*
+"""
 
 
 def get_project_agent_dir(project_path: Path | None = None) -> Path:
@@ -116,6 +157,9 @@ def init_project(
 
     # Create .gitignore to avoid pushing .agent/ content to git
     (agent_dir / ".gitignore").write_text("*\n", encoding="utf-8")
+
+    # Create README_AGENT.md to guide agents
+    (agent_dir / README_AGENT_FILE).write_text(README_AGENT_CONTENT, encoding="utf-8")
 
     # Copy knowledge, methodology, debug, sources from bundled package
     _copy_directory(BUNDLED_KNOWLEDGE_DIR, agent_dir / KNOWLEDGE_SUBDIR)

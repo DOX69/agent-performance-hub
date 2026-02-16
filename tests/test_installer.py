@@ -113,6 +113,15 @@ class TestInitProject:
         assert "installed_skills" in manifest
         assert "initialized_at" in manifest
 
+    def test_init_creates_agent_readme(self, tmp_project):
+        init_project(project_path=tmp_project)
+        readme_path = tmp_project / ".agent" / "README_AGENT.md"
+        assert readme_path.exists()
+        content = readme_path.read_text(encoding="utf-8")
+        assert "APH" in content
+        assert "Agent Guide" in content
+        assert "aph search" in content
+
     def test_init_installs_core_skills(self, tmp_project):
         init_project(project_path=tmp_project)
         installed = get_installed_skills(tmp_project)
