@@ -6,14 +6,23 @@ from pathlib import Path
 # The root of the installed aph package (where .agent/skills/ lives)
 PACKAGE_ROOT = Path(__file__).parent.parent.resolve()
 
-# The bundled skills directory inside the package
-BUNDLED_SKILLS_DIR = PACKAGE_ROOT / ".agent" / "skills"
+# Helper: Try to find bundled resources
+try:
+    import aph.bundled
+    # If installed as a package with the mapping
+    BUNDLED_AGENT_ROOT = Path(aph.bundled.__file__).parent
+except ImportError:
+    # If running from source/repo without mapping
+    BUNDLED_AGENT_ROOT = PACKAGE_ROOT.parent / ".agent"
+
+# The bundled skills directory inside the package (or repo)
+BUNDLED_SKILLS_DIR = BUNDLED_AGENT_ROOT / "skills"
 
 # The bundled knowledge/methodology/debug/sources directories
-BUNDLED_KNOWLEDGE_DIR = PACKAGE_ROOT / ".agent" / "knowledge"
-BUNDLED_METHODOLOGY_DIR = PACKAGE_ROOT / ".agent" / "methodology"
-BUNDLED_DEBUG_DIR = PACKAGE_ROOT / ".agent" / "debug"
-BUNDLED_SOURCES_DIR = PACKAGE_ROOT / ".agent" / "sources"
+BUNDLED_KNOWLEDGE_DIR = BUNDLED_AGENT_ROOT / "knowledge"
+BUNDLED_METHODOLOGY_DIR = BUNDLED_AGENT_ROOT / "methodology"
+BUNDLED_DEBUG_DIR = BUNDLED_AGENT_ROOT / "debug"
+BUNDLED_SOURCES_DIR = BUNDLED_AGENT_ROOT / "sources"
 
 # Skills registry file
 SKILLS_REGISTRY_FILE = PACKAGE_ROOT / "aph" / "skills_registry.json"

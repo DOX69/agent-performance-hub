@@ -38,10 +38,18 @@ Repository = "https://github.com/DOX69/agent-performance-hub"
 Issues = "https://github.com/DOX69/agent-performance-hub/issues"
 
 [tool.setuptools.packages.find]
+where = ["."]
 include = ["aph*"]
+namespaces = false
+
+[tool.setuptools.package-dir]
+"aph.bundled" = ".agent"
+
 
 [tool.setuptools.package-data]
 aph = ["**/*"]
+"aph.bundled" = ["**/*"]
+
 
 [tool.setuptools]
 include-package-data = true
