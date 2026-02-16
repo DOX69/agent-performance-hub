@@ -29,7 +29,8 @@ BUNDLED_DEBUG_DIR = BUNDLED_AGENT_ROOT / "debug"
 BUNDLED_SOURCES_DIR = BUNDLED_AGENT_ROOT / "sources"
 
 # Skills registry file
-SKILLS_REGISTRY_FILE = PACKAGE_ROOT / "aph" / "skills_registry.json"
+# Uses __file__ to locate registry relative to installed package location
+SKILLS_REGISTRY_FILE = Path(__file__).parent / "skills_registry.json"
 
 # ─── Target Project Paths ─────────────────────────────────────────────────────
 AGENT_DIR_NAME = ".agent"
