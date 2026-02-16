@@ -17,8 +17,15 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 ### 1. Install
 
 ```bash
-# HTTPS is recommended (easiest for private repos)
-pip install git+https://github.com/DOX69/agent-performance-hub.git
+# Recommended: Modern setup using 'uv'
+# 1. Install uv (if not present): https://docs.astral.sh/uv/getting-started/installation/
+# 2. Setup your project and install APH
+uv init
+uv venv .venv
+# On Windows (PowerShell/Bash):
+source .venv/Scripts/activate
+# Then install APH
+uv pip install --upgrade git+https://github.com/DOX69/agent-performance-hub.git
 ```
 
 ### 2. Initialize your project
@@ -137,10 +144,13 @@ aph update docker-expert
 
 - **Python 3.11+**
 - **Git**
-- **Access to this private repository** (HTTPS is recommended)
+- **[uv](https://docs.astral.sh/uv/)** (Recommended for high performance)
+- **Access to this private repository**
 
 ### Authentication (Private Repo)
 Since this is a private repo, you'll need to authenticate.
+- **HTTPS (Recommended)**: Use a GitHub Personal Access Token (PAT) or Git Credential Manager.
+- **SSH (Alternative)**: Ensure your SSH key is added to GitHub.
 - **HTTPS (Recommended)**: Use a GitHub Personal Access Token (PAT) or Git Credential Manager.
 - **SSH (Alternative)**: Ensure your SSH key is added to GitHub.
 

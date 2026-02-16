@@ -114,6 +114,9 @@ def init_project(
     for subdir in INIT_SUBDIRS:
         (agent_dir / subdir).mkdir(parents=True, exist_ok=True)
 
+    # Create .gitignore to avoid pushing .agent/ content to git
+    (agent_dir / ".gitignore").write_text("*\n", encoding="utf-8")
+
     # Copy knowledge, methodology, debug, sources from bundled package
     _copy_directory(BUNDLED_KNOWLEDGE_DIR, agent_dir / KNOWLEDGE_SUBDIR)
     _copy_directory(BUNDLED_METHODOLOGY_DIR, agent_dir / METHODOLOGY_SUBDIR)

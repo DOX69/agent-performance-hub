@@ -1,6 +1,8 @@
 # How To Use `agent-performance-hub`
 
-This guide explains how to leverage the skills, knowledge, and methodology from this repository in your other projects (e.g., specific web apps, data pipelines).
+This guide explains how to leverage the skills, knowledge, and methodology from this repository in your other projects (e.g., specific web apps, data pipelines).  
+
+**I recommend using strategy 4 for new projects using uv**.
 
 ## Strategy 1: The "Reference" Approach (Recommended for Antigravity)
 
@@ -52,6 +54,23 @@ cp -r ~/code/agent-performance-hub/.agent/skills/code-generation/web-app-vibe-co
 
 **Cons:**
 - Drift from the main hub updates.
+
+## Strategy 4: Start from Scratch with `uv` (Fastest)
+
+If you are starting a completely new project and want a managed virtual environment:
+
+1. **Install uv** (if you haven't): [Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
+2. **Initialize and Install**:
+    ```bash
+    mkdir my-new-agent-project
+    cd my-new-agent-project
+    uv init
+    uv venv .venv
+    source .venv/Scripts/activate  # On Windows: .venv\Scripts\activate
+    
+    uv pip install git+https://github.com/DOX69/agent-performance-hub.git
+    aph init
+    ```
 
 ---
 
