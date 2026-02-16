@@ -51,5 +51,5 @@ INIT_SUBDIRS = [
 
 # ─── GitHub Repo ──────────────────────────────────────────────────────────────
 GITHUB_REPO = "DOX69/agent-performance-hub"
+GITHUB_HTTPS_URL = f"https://github.com/{GITHUB_REPO}.git"
 GITHUB_SSH_URL = f"git@github.com:{GITHUB_REPO}.git"
-GITHUB_HTTPS_URL = f"https://github.com/{GITHUB_REPO}"

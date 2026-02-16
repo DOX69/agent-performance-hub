@@ -17,8 +17,8 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 ### 1. Install
 
 ```bash
-# Requires SSH access to this private repo
-pip install git+ssh://git@github.com/DOX69/agent-performance-hub.git
+# HTTPS is recommended (easiest for private repos)
+pip install git+https://github.com/DOX69/agent-performance-hub.git
 ```
 
 ### 2. Initialize your project
@@ -121,8 +121,8 @@ Browse all: `aph list` or `aph list --category <name>`
 ## 🔄 Updating Skills
 
 ```bash
-# Update the aph package itself (get latest skills from repo)
-pip install --upgrade git+ssh://git@github.com/DOX69/agent-performance-hub.git
+# Update the aph package itself
+pip install --upgrade git+https://github.com/DOX69/agent-performance-hub.git
 
 # Update all installed skills in your project to latest
 aph update
@@ -136,10 +136,13 @@ aph update docker-expert
 ## 🛠️ Requirements
 
 - **Python 3.11+**
-- **Git** with SSH key configured for GitHub
-- **SSH access** to this private repository
+- **Git**
+- **Access to this private repository** (HTTPS is recommended)
 
-### Setting up SSH access
+### Authentication (Private Repo)
+Since this is a private repo, you'll need to authenticate.
+- **HTTPS (Recommended)**: Use a GitHub Personal Access Token (PAT) or Git Credential Manager.
+- **SSH (Alternative)**: Ensure your SSH key is added to GitHub.
 
 ```bash
 # Check if you have an SSH key
@@ -158,7 +161,7 @@ cat ~/.ssh/id_ed25519.pub
 
 ```bash
 # Clone the repo
-git clone git@github.com:DOX69/agent-performance-hub.git
+git clone https://github.com/DOX69/agent-performance-hub.git
 cd agent-performance-hub
 
 # Install in editable mode

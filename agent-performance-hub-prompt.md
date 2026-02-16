@@ -862,7 +862,7 @@ pour interagir avec Gemini 3 et Claude Opus/Sonnet via context engineering avanc
 
 ```bash
 # 1. Clone repo
-git clone git@github.com:YOUR_USERNAME/agent-performance-hub.git
+git clone https://github.com/DOX69/agent-performance-hub.git
 cd agent-performance-hub
 
 # 2. Examine .agent/ structure

@@ -10,22 +10,27 @@
 
 ### 1. Source Monitoring
 You must actively check the following sources for updates related to **Gemini 3**, **Claude Sonnet/Opus**, **MCP**, and **Agentic Coding**:
+- **Claude Code Skills**: [claude-code-skills](https://github.com/QuestForTech-Investments/claude-code-skills) (Critical source for professional-grade skills).
 - **Official Blogs**: Anthropic Research, Google DeepMind / AI.
 - **GitHub Trending**: Repositories like `cline`, `antigravity`, `langchain`, `semantic-kernel`.
 - **Awesome Skills**: [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) (Critical source for continuous improvement).
-- **Community**: Twitter/X key influencers (if accessible via tools), Reddit r/LocalLLaMA, r/MachineLearning.
-- **arXiv**: New papers on "Context Optimization", "Prompt Engineering", "Large Context Window handling".
+- **Search & Verify**: You must **Google search** and **scan repositories** to verify the validity of new patterns and find skills not yet present in the `agent-performance-hub` registry.
 
 ### 2. Analysis & Filtration
 For every potential update, ask:
 - "Does this change how we code?"
 - "Does this offer a token reduction opportunity?"
-- "Does this enable a new capability (e.g., Computer Use, Voice Mode)?"
+- "Does this enable a new capability (e.g., Computer Use, Voice Mode, SQL Expert)?"
+- "Is this skill missing from our `agent-performance-hub`? (Refer to `skills_registry.json` to prevent duplication)."
 
-*If YES*: It belongs in `.agent/sources/` and potentially triggers a Skill update.
-*If NO*: Discard.
+### 3. Skill Acquisition & Adaptation
+When a valuable skill is found in external sources (like `claude-code-skills`):
+1. **Detect Gap**: Check `skills_registry.json`. If a similar skill exists, update it instead of adding a new one.
+2. **Adapt for APH**: Convert the skill to the APH format. Ensure it is optimized for **Antigravity** and a **VS Code-like IDE**.
+3. **Refinement**: Explain clearly the *why* behind the patterns and provide detailed instructions.
+4. **Tooling**: If the skill requires specialized scripts (like SQL helpers), adapt them to be cross-platform and robust.
 
-### 3. Execution Protocol (The "Weekly Routine")
+### 4. Execution Protocol (The "Weekly Routine")
 
 **Step A: Update Sources Registry**
 - Append findings to `.agent/sources/archive/sources-[YYYY-MM].json`.
@@ -90,9 +95,10 @@ This step ensures the `aph` CLI package stays up-to-date and functional.
 
 ## Example Interaction
 **Trigger**: "Jules, execute weekly watch."
-**Jules**: "Scanning Anthropic and Google AI blogs... Found release notes for Claude 3.7. It supports native graph rendering.
+**Jules**: "Scanning Claude Code Skills and Anthropic blogs... Found an expert SQL skill. I noticed our registry has `nosql-expert` but lacks `sql-expert`.
 Action:
-1. Creating `.agent/skills/visualization/mermaid-graphs.md`.
-2. Updating `OFFICIAL_SOURCES.md`.
-3. Running audit script.
-Done. PR created."
+1. Creating `.agent/skills/database/sql-expert/SKILL.md` by adapting the `claude-code-skills` version for Antigravity.
+2. Porting `sql_helper.py` to APH scripts directory.
+3. Updating `OFFICIAL_SOURCES.md`.
+4. Running audit script and pytest.
+Registry updated. PR created."

@@ -22,7 +22,7 @@ If you want to enforce that a project uses a specific version of your agent skil
 1.  **Add submodule**:
     ```bash
     cd my-new-project
-    git submodule add git@github.com:YOUR_USERNAME/agent-performance-hub.git .agent-hub
+    git submodule add https://github.com/DOX69/agent-performance-hub.git .agent-hub
     ```
 
 2.  **Symlink relevant skills**:
