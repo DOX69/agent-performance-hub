@@ -13,7 +13,7 @@ try:
     BUNDLED_AGENT_ROOT = Path(aph.bundled.__file__).parent
 except ImportError:
     # If running from source/repo without mapping
-    BUNDLED_AGENT_ROOT = PACKAGE_ROOT.parent / ".agent"
+    BUNDLED_AGENT_ROOT = PACKAGE_ROOT / ".agent"
 
 # The bundled skills directory inside the package (or repo)
 BUNDLED_SKILLS_DIR = BUNDLED_AGENT_ROOT / "skills"
