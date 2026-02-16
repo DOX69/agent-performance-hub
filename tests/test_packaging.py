@@ -39,7 +39,8 @@ def test_package_configuration():
         "pyproject.toml must map aph.bundled to .agent"
         
     # Check for package inclusion
-    assert 'include = ["aph*"]' in content, "Should include aph*"
+    assert 'packages = ["aph", "aph.bundled"]' in content or "packages = ['aph', 'aph.bundled']" in content, \
+        "Should explicitly list packages aph and aph.bundled"
     
     # Check for package data
     assert '"aph.bundled" = ["**/*"]' in content or "'aph.bundled' = ['**/*']" in content, \
