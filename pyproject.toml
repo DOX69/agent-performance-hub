@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aph"
-version = "0.1.0"
+version = "0.1.1"
 description = "Agent Performance Hub — CLI tool for managing AI agent skills across your projects"
 readme = "README.md"
 license = {text = "MIT"}
