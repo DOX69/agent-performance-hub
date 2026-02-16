@@ -12,6 +12,24 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 
 ---
 
+## 📋 Table of Contents
+
+- [⚡ Quick Start](#-quick-start-3-steps)
+- [📖 Commands](#-commands)
+- [📦 What Gets Created](#-what-gets-created)
+- [🎯 Core Skills](#-core-skills-installed-by-default)
+- [🗂️ Skill Categories](#-skill-categories)
+- [🔄 Updating Skills](#-updating-skills)
+- [🛠️ Requirements](#-requirements)
+- [🧪 Development & Testing](#-development--testing)
+- [🤖 Automated Maintenance](#-automated-maintenance)
+- [📝 Adding New Skills](#-adding-new-skills)
+- [📊 Metrics](#-metrics)
+- [🤝 Collaboration](#-collaboration)
+- [⚖️ License](#-license)
+
+---
+
 ## ⚡ Quick Start (3 steps)
 
 ### 1. Install
@@ -129,7 +147,7 @@ Browse all: `aph list` or `aph list --category <name>`
 
 ```bash
 # Update the aph package itself
-pip install --upgrade git+https://github.com/DOX69/agent-performance-hub.git
+uv pip install --upgrade git+https://github.com/DOX69/agent-performance-hub.git
 
 # Update all installed skills in your project to latest
 aph update
