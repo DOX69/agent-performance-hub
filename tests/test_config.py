@@ -63,6 +63,7 @@ class TestCoreSkills:
             "clean-code",
             "systematic-debugging",
             "verification-before-completion",
+            "test-driven-development",
         }
         assert set(CORE_SKILLS) == expected
 
