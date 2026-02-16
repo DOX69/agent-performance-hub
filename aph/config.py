@@ -10,7 +10,11 @@ PACKAGE_ROOT = Path(__file__).parent.parent.resolve()
 try:
     import aph.bundled
     # If installed as a package with the mapping
-    BUNDLED_AGENT_ROOT = Path(aph.bundled.__file__).parent
+    if hasattr(aph.bundled, "__file__") and aph.bundled.__file__:
+        BUNDLED_AGENT_ROOT = Path(aph.bundled.__file__).parent
+    else:
+        # Namespace package (no __init__.py, so no __file__)
+        BUNDLED_AGENT_ROOT = Path(list(aph.bundled.__path__)[0])
 except ImportError:
     # If running from source/repo without mapping
     BUNDLED_AGENT_ROOT = PACKAGE_ROOT / ".agent"
