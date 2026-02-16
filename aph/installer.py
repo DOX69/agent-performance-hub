@@ -302,3 +302,32 @@ def update_all_skills(
             errors.append(f"  ⚠ {skill_name}: {msg}")
 
     return updated, len(errors), errors
+
+
+def uninstall_aph(
+    project_path: Path | None = None,
+) -> tuple[bool, str]:
+    """Uninstall APH from the system and remove .agent/ directory.
+
+    Args:
+        project_path: Target project root.
+
+    Returns:
+        (success: bool, message: str)
+    """
+    import subprocess
+    import shutil
+
+    agent_dir = get_project_agent_dir(project_path)
+    
+    # Remove .agent directory
+    if agent_dir.exists():
+        shutil.rmtree(agent_dir)
+        
+    # Uninstall package
+    try:
+        subprocess.check_call(["pip", "uninstall", "aph", "-y"])
+    except subprocess.CalledProcessError as e:
+        return False, f"Failed to uninstall aph package: {e}"
+        
+    return True, "Uninstalled APH and removed .agent/ directory."

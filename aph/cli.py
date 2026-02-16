@@ -411,6 +411,52 @@ def remove(skill_name, force):
         console.print(f"[red]❌ {msg}[/]")
 
 
+# ─── aph uninstall ────────────────────────────────────────────────────────────
+
+@main.command()
+@click.option("--force", is_flag=True, help="Skip confirmation.")
+def uninstall(force):
+    """Uninstall APH from the system and remove .agent/ directory.
+
+    PURPOSE:
+    Completely remove the Agent Performance Hub from your project and system.
+    WARNING: This action is destructive and cannot be undone.
+
+    USAGE:
+    aph uninstall [OPTIONS]
+
+    OPTIONS:
+    --force     Skip confirmation prompt.
+
+    OUTPUT:
+    Success/failure message.
+
+    EXIT_CODES:
+    0 = Success
+    1 = Error
+
+    EXAMPLES:
+    aph uninstall
+    aph uninstall --force
+    """
+    from .installer import uninstall_aph as installer_uninstall_aph
+
+    if not force:
+        console.print(
+            "[bold red]WARNING: This will remove the .agent/ directory and uninstall the 'aph' package.[/]"
+        )
+        if not click.confirm("Are you sure you want to proceed?"):
+            console.print("[dim]Cancelled.[/]")
+            return
+
+    success, msg = installer_uninstall_aph()
+    if success:
+        console.print(f"✅ {msg}")
+    else:
+        console.print(f"[red]❌ {msg}[/]")
+        raise SystemExit(1)
+
+
 # ─── aph update ───────────────────────────────────────────────────────────────
 
 @main.command()
