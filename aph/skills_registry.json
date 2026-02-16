@@ -8,6 +8,7 @@
     "expert-skill-creator",
     "git-pushing",
     "systematic-debugging",
+    "test-driven-development",
     "verification-before-completion"
   ],
   "categories": {
@@ -38,7 +39,7 @@
       "category": "methodology",
       "tags": [],
       "core": false,
-      "size_kb": 10
+      "size_kb": 11
     },
     {
       "name": "active-directory-attacks",
@@ -46,7 +47,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 18
+      "size_kb": 19
     },
     {
       "name": "address-github-comments",
@@ -134,7 +135,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 58
+      "size_kb": 59
     },
     {
       "name": "analytics-tracking",
@@ -142,7 +143,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 10
+      "size_kb": 11
     },
     {
       "name": "api-documentation-generator",
@@ -150,7 +151,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 10
+      "size_kb": 11
     },
     {
       "name": "api-fuzzing-bug-bounty",
@@ -174,7 +175,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 22
+      "size_kb": 23
     },
     {
       "name": "app-builder",
@@ -182,7 +183,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 40
+      "size_kb": 42
     },
     {
       "name": "app-store-optimization",
@@ -190,7 +191,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 216
+      "size_kb": 222
     },
     {
       "name": "architecture",
@@ -206,7 +207,7 @@
       "category": "ai-agents",
       "tags": [],
       "core": false,
-      "size_kb": 22
+      "size_kb": 23
     },
     {
       "name": "autonomous-agents",
@@ -246,7 +247,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 20
+      "size_kb": 21
     },
     {
       "name": "aws-serverless",
@@ -254,7 +255,7 @@
       "category": "devops",
       "tags": [],
       "core": false,
-      "size_kb": 7
+      "size_kb": 8
     },
     {
       "name": "azure-functions",
@@ -270,7 +271,7 @@
       "category": "backend",
       "tags": [],
       "core": false,
-      "size_kb": 130
+      "size_kb": 135
     },
     {
       "name": "bash-linux",
@@ -294,7 +295,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 8
+      "size_kb": 9
     },
     {
       "name": "brainstorming",
@@ -342,7 +343,7 @@
       "category": "tools",
       "tags": [],
       "core": false,
-      "size_kb": 5
+      "size_kb": 6
     },
     {
       "name": "bullmq-specialist",
@@ -358,7 +359,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 13
+      "size_kb": 14
     },
     {
       "name": "burp-suite-testing",
@@ -366,7 +367,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 10
+      "size_kb": 11
     },
     {
       "name": "busybox-on-windows",
@@ -382,7 +383,7 @@
       "category": "frontend",
       "tags": [],
       "core": false,
-      "size_kb": 5423
+      "size_kb": 5426
     },
     {
       "name": "cc-skill-backend-patterns",
@@ -390,7 +391,7 @@
       "category": "backend",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "cc-skill-clickhouse-io",
@@ -398,7 +399,7 @@
       "category": "data",
       "tags": [],
       "core": false,
-      "size_kb": 9
+      "size_kb": 10
     },
     {
       "name": "cc-skill-coding-standards",
@@ -438,7 +439,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "cc-skill-strategic-compact",
@@ -462,7 +463,7 @@
       "category": "frontend",
       "tags": [],
       "core": false,
-      "size_kb": 80
+      "size_kb": 83
     },
     {
       "name": "clean-code",
@@ -534,7 +535,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 55
+      "size_kb": 57
     },
     {
       "name": "context-window-management",
@@ -566,7 +567,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "copywriting",
@@ -574,7 +575,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "core-components",
@@ -590,7 +591,7 @@
       "category": "ai-agents",
       "tags": [],
       "core": false,
-      "size_kb": 5
+      "size_kb": 6
     },
     {
       "name": "database-design",
@@ -598,7 +599,7 @@
       "category": "data",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "deployment-procedures",
@@ -614,7 +615,7 @@
       "category": "integrations",
       "tags": [],
       "core": false,
-      "size_kb": 7
+      "size_kb": 8
     },
     {
       "name": "dispatching-parallel-agents",
@@ -622,7 +623,7 @@
       "category": "ai-agents",
       "tags": [],
       "core": false,
-      "size_kb": 5
+      "size_kb": 6
     },
     {
       "name": "doc-coauthoring",
@@ -638,7 +639,7 @@
       "category": "devops",
       "tags": [],
       "core": false,
-      "size_kb": 13
+      "size_kb": 14
     },
     {
       "name": "documentation-templates",
@@ -654,7 +655,7 @@
       "category": "tools",
       "tags": [],
       "core": false,
-      "size_kb": 1158
+      "size_kb": 1182
     },
     {
       "name": "email-sequence",
@@ -662,7 +663,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 22
+      "size_kb": 23
     },
     {
       "name": "email-systems",
@@ -686,7 +687,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 10
+      "size_kb": 11
     },
     {
       "name": "exa-search",
@@ -715,7 +716,7 @@
         "antigravity"
       ],
       "core": true,
-      "size_kb": 21
+      "size_kb": 22
     },
     {
       "name": "file-organizer",
@@ -731,7 +732,7 @@
       "category": "tools",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "file-uploads",
@@ -795,7 +796,7 @@
       "category": "frontend",
       "tags": [],
       "core": false,
-      "size_kb": 128
+      "size_kb": 134
     },
     {
       "name": "game-development",
@@ -803,7 +804,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 35
+      "size_kb": 36
     },
     {
       "name": "gcp-cloud-run",
@@ -811,7 +812,7 @@
       "category": "devops",
       "tags": [],
       "core": false,
-      "size_kb": 6
+      "size_kb": 7
     },
     {
       "name": "geo-fundamentals",
@@ -819,7 +820,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "git-pushing",
@@ -851,7 +852,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "hubspot-integration",
@@ -899,7 +900,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 21
+      "size_kb": 22
     },
     {
       "name": "internal-comms-community",
@@ -915,7 +916,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "kaizen",
@@ -947,7 +948,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "lint-and-validate",
@@ -955,7 +956,7 @@
       "category": "methodology",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "linux-privilege-escalation",
@@ -987,7 +988,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 7312
+      "size_kb": 7388
     },
     {
       "name": "marketing-ideas",
@@ -995,7 +996,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 23
+      "size_kb": 24
     },
     {
       "name": "marketing-psychology",
@@ -1003,7 +1004,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 20
+      "size_kb": 21
     },
     {
       "name": "mcp-builder",
@@ -1011,7 +1012,7 @@
       "category": "ai-agents",
       "tags": [],
       "core": false,
-      "size_kb": 118
+      "size_kb": 122
     },
     {
       "name": "mcp-setup-antigravity",
@@ -1027,7 +1028,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "micro-saas-launcher",
@@ -1043,7 +1044,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 215
+      "size_kb": 221
     },
     {
       "name": "moodle-external-api-development",
@@ -1051,7 +1052,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 17
+      "size_kb": 18
     },
     {
       "name": "neon-postgres",
@@ -1067,7 +1068,7 @@
       "category": "backend",
       "tags": [],
       "core": false,
-      "size_kb": 20
+      "size_kb": 21
     },
     {
       "name": "network-101",
@@ -1115,7 +1116,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 262
+      "size_kb": 266
     },
     {
       "name": "notion-template-business",
@@ -1131,7 +1132,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 13
+      "size_kb": 14
     },
     {
       "name": "onboarding-cro",
@@ -1155,7 +1156,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 14
+      "size_kb": 15
     },
     {
       "name": "parallel-agents",
@@ -1171,7 +1172,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 13
+      "size_kb": 14
     },
     {
       "name": "pdf-official",
@@ -1179,7 +1180,7 @@
       "category": "tools",
       "tags": [],
       "core": false,
-      "size_kb": 62
+      "size_kb": 64
     },
     {
       "name": "pentest-checklist",
@@ -1187,7 +1188,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 9
+      "size_kb": 10
     },
     {
       "name": "pentest-commands",
@@ -1211,7 +1212,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 6
+      "size_kb": 7
     },
     {
       "name": "plaid-fintech",
@@ -1227,7 +1228,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 3
+      "size_kb": 4
     },
     {
       "name": "planning-with-files",
@@ -1235,7 +1236,7 @@
       "category": "methodology",
       "tags": [],
       "core": false,
-      "size_kb": 33
+      "size_kb": 35
     },
     {
       "name": "playwright-skill",
@@ -1243,7 +1244,7 @@
       "category": "tools",
       "tags": [],
       "core": false,
-      "size_kb": 48
+      "size_kb": 49
     },
     {
       "name": "popup-cro",
@@ -1251,7 +1252,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 10
+      "size_kb": 11
     },
     {
       "name": "postgres-best-practices",
@@ -1259,7 +1260,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 98
+      "size_kb": 102
     },
     {
       "name": "powershell-windows",
@@ -1275,7 +1276,7 @@
       "category": "tools",
       "tags": [],
       "core": false,
-      "size_kb": 1201
+      "size_kb": 1227
     },
     {
       "name": "pricing-strategy",
@@ -1283,7 +1284,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 21
+      "size_kb": 22
     },
     {
       "name": "prisma-expert",
@@ -1299,7 +1300,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 7
+      "size_kb": 8
     },
     {
       "name": "product-manager-toolkit",
@@ -1307,7 +1308,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 44
+      "size_kb": 45
     },
     {
       "name": "production-code-audit",
@@ -1387,7 +1388,7 @@
       "category": "frontend",
       "tags": [],
       "core": false,
-      "size_kb": 128
+      "size_kb": 132
     },
     {
       "name": "react-patterns",
@@ -1443,7 +1444,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 76
+      "size_kb": 79
     },
     {
       "name": "requesting-code-review",
@@ -1451,7 +1452,7 @@
       "category": "methodology",
       "tags": [],
       "core": false,
-      "size_kb": 5
+      "size_kb": 6
     },
     {
       "name": "research-engineer",
@@ -1483,7 +1484,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "scroll-experience",
@@ -1491,7 +1492,7 @@
       "category": "frontend",
       "tags": [],
       "core": false,
-      "size_kb": 5
+      "size_kb": 6
     },
     {
       "name": "segment-cdp",
@@ -1507,7 +1508,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 18
+      "size_kb": 19
     },
     {
       "name": "senior-fullstack",
@@ -1515,7 +1516,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 18
+      "size_kb": 19
     },
     {
       "name": "seo-audit",
@@ -1563,7 +1564,7 @@
       "category": "integrations",
       "tags": [],
       "core": false,
-      "size_kb": 80
+      "size_kb": 83
     },
     {
       "name": "signup-flow-cro",
@@ -1579,7 +1580,7 @@
       "category": "tools",
       "tags": [],
       "core": false,
-      "size_kb": 52
+      "size_kb": 54
     },
     {
       "name": "slack-bot-builder",
@@ -1595,7 +1596,7 @@
       "category": "integrations",
       "tags": [],
       "core": false,
-      "size_kb": 42
+      "size_kb": 43
     },
     {
       "name": "smtp-penetration-testing",
@@ -1603,7 +1604,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "social-content",
@@ -1611,7 +1612,7 @@
       "category": "marketing",
       "tags": [],
       "core": false,
-      "size_kb": 20
+      "size_kb": 21
     },
     {
       "name": "software-architecture",
@@ -1635,7 +1636,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "ssh-penetration-testing",
@@ -1643,7 +1644,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "stripe-integration",
@@ -1667,7 +1668,7 @@
       "category": "methodology",
       "tags": [],
       "core": true,
-      "size_kb": 39
+      "size_kb": 41
     },
     {
       "name": "tailwind-patterns",
@@ -1699,7 +1700,7 @@
       "category": "integrations",
       "tags": [],
       "core": false,
-      "size_kb": 5
+      "size_kb": 6
     },
     {
       "name": "telegram-mini-app",
@@ -1714,8 +1715,8 @@
       "description": "Use when implementing any feature or bugfix, before writing implementation code",
       "category": "methodology",
       "tags": [],
-      "core": false,
-      "size_kb": 17
+      "core": true,
+      "size_kb": 18
     },
     {
       "name": "test-fixing",
@@ -1723,7 +1724,7 @@
       "category": "methodology",
       "tags": [],
       "core": false,
-      "size_kb": 2
+      "size_kb": 3
     },
     {
       "name": "testing-patterns",
@@ -1739,7 +1740,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 140
+      "size_kb": 141
     },
     {
       "name": "top-web-vulnerabilities",
@@ -1747,7 +1748,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 23
+      "size_kb": 24
     },
     {
       "name": "trigger-dev",
@@ -1763,7 +1764,7 @@
       "category": "integrations",
       "tags": [],
       "core": false,
-      "size_kb": 8
+      "size_kb": 9
     },
     {
       "name": "typescript-expert",
@@ -1771,7 +1772,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 39
+      "size_kb": 40
     },
     {
       "name": "ui-ux-pro-max",
@@ -1779,7 +1780,7 @@
       "category": "frontend",
       "tags": [],
       "core": false,
-      "size_kb": 457
+      "size_kb": 459
     },
     {
       "name": "upstash-qstash",
@@ -1851,7 +1852,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 27
+      "size_kb": 28
     },
     {
       "name": "web-artifacts-builder",
@@ -1859,7 +1860,7 @@
       "category": "frontend",
       "tags": [],
       "core": false,
-      "size_kb": 44
+      "size_kb": 45
     },
     {
       "name": "web-design-guidelines",
@@ -1875,7 +1876,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 15
+      "size_kb": 16
     },
     {
       "name": "webapp-testing",
@@ -1899,7 +1900,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "wordpress-penetration-testing",
@@ -1907,7 +1908,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 11
+      "size_kb": 12
     },
     {
       "name": "workflow-automation",
@@ -1931,7 +1932,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 97
+      "size_kb": 99
     },
     {
       "name": "xlsx-official",
@@ -1947,7 +1948,7 @@
       "category": "security",
       "tags": [],
       "core": false,
-      "size_kb": 12
+      "size_kb": 13
     },
     {
       "name": "zapier-make-patterns",

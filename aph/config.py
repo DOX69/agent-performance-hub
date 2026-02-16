@@ -16,7 +16,7 @@ BUNDLED_DEBUG_DIR = PACKAGE_ROOT / ".agent" / "debug"
 BUNDLED_SOURCES_DIR = PACKAGE_ROOT / ".agent" / "sources"
 
 # Skills registry file
-SKILLS_REGISTRY_FILE = PACKAGE_ROOT / "skills_registry.json"
+SKILLS_REGISTRY_FILE = PACKAGE_ROOT / "aph" / "skills_registry.json"
 
 # ─── Target Project Paths ─────────────────────────────────────────────────────
 AGENT_DIR_NAME = ".agent"
@@ -38,6 +38,7 @@ CORE_SKILLS = [
     "clean-code",
     "systematic-debugging",
     "verification-before-completion",
+    "test-driven-development",
 ]
 
 # ─── Directories created on `aph init` ────────────────────────────────────────

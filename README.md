@@ -25,7 +25,7 @@ uv venv .venv
 # On Windows (PowerShell/Bash):
 source .venv/Scripts/activate
 # Then install APH
-uv pip install --upgrade git+https://github.com/DOX69/agent-performance-hub.git
+uv pip install git+https://github.com/DOX69/agent-performance-hub.git
 ```
 
 ### 2. Initialize your project

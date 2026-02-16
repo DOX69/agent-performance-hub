@@ -26,7 +26,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent.resolve()
 SKILLS_DIR = REPO_ROOT / ".agent" / "skills"
-OUTPUT_FILE = REPO_ROOT / "skills_registry.json"
+OUTPUT_FILE = REPO_ROOT / "aph" / "skills_registry.json"
 
 # Core skills — installed by default with `aph init`
 CORE_SKILLS = [
@@ -36,6 +36,7 @@ CORE_SKILLS = [
     "clean-code",
     "systematic-debugging",
     "verification-before-completion",
+    "test-driven-development",
 ]
 
 # Category detection based on skill name patterns and common tags
