@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2026-06-11",
+    "source": "Anthropic Research",
+    "title": "Agentic Coding Trends Report 2026",
+    "url": "https://resources.anthropic.com/2026-agentic-coding-trends-report",
+    "analysis": "Identified shift from code generation to agent orchestration. Validated need for robust SQL skills in agentic workflows.",
+    "impact": "New Skill: sql-expert",
+    "status": "Actioned"
+  },
+  {
+    "date": "2026-06-11",
+    "source": "Anthropic News",
+    "title": "Claude 3.7 Sonnet & Claude Code",
+    "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+    "analysis": "Hybrid reasoning model release. Introduces 'Claude Code' CLI tool.",
+    "impact": "Registry Update: Noted for future skill integration.",
+    "status": "Logged"
+  },
+  {
+    "date": "2026-06-11",
+    "source": "Google DeepMind",
+    "title": "Veo 3.1 & Gemini Updates",
+    "url": "https://blog.google/technology/ai/gemini-updates",
+    "analysis": "Video generation capabilities (Veo) integrated into Gemini.",
+    "impact": "Registry Update: Monitored.",
+    "status": "Logged"
+  },
+  {
+    "date": "2026-06-11",
+    "source": "EzInsights AI",
+    "title": "Best Practices for Building Robust Text-to-SQL Agents",
+    "url": "https://medium.com/@ezinsightsai/best-practices-for-building-robust-text-to-sql-agents-f81d4c4ea6b3",
+    "analysis": "Detailed patterns for Schema-First Prompting and Constraint-Based Prompting.",
+    "impact": "Incorporated into sql-expert SKILL.md",
+    "status": "Actioned"
+  }
+]
