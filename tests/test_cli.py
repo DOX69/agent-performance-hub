@@ -28,7 +28,7 @@ class TestVersion:
         result = runner.invoke(main, ["version"])
         assert result.exit_code == 0
         assert "aph" in result.output
-        assert "0.1.1" in result.output
+        assert "0.1.2" in result.output
 
 
 class TestHelp:

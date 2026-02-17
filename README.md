@@ -266,4 +266,4 @@ Private repository — access by invitation only.
 
 ---
 
-**Last updated**: 2026-06-11 | **aph** v0.1.1
+**Last updated**: 2026-06-11 | **aph** v0.1.2

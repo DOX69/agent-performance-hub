@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "generated": "2026-02-16",
-  "total_skills": 242,
+  "generated": "2026-02-17",
+  "total_skills": 243,
   "core_skills": [
     "brainstorming",
     "clean-code",
@@ -20,7 +20,7 @@
     "integrations": 15,
     "marketing": 20,
     "methodology": 20,
-    "other": 76,
+    "other": 77,
     "security": 27,
     "tools": 18
   },
@@ -717,6 +717,21 @@
       ],
       "core": true,
       "size_kb": 21
+    },
+    {
+      "name": "expert-streamlit-dashboard",
+      "description": "Expert guidance for building high-performance, professional, and minimalist Streamlit dashboards. Focuses on caching strategies, SQL optimization, and clean data-first UX.",
+      "category": "other",
+      "tags": [
+        "streamlit",
+        "dashboard",
+        "data-visualization",
+        "sql-optimization",
+        "python",
+        "ux-design"
+      ],
+      "core": false,
+      "size_kb": 7
     },
     {
       "name": "file-organizer",
