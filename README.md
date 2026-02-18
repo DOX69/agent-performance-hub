@@ -27,6 +27,7 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 - [📊 Metrics](#-metrics)
 - [🤝 Collaboration](#-collaboration)
 - [⚖️ License](#-license)
+- [📅 Changelog](CHANGELOG.md)
 
 ---
 
@@ -266,4 +267,4 @@ Private repository — access by invitation only.
 
 ---
 
-**Last updated**: 2026-06-11 | **aph-cli** (latest)
+**Last updated**: 2026-06-11 | See [CHANGELOG.md](CHANGELOG.md) for version history.

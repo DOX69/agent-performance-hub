@@ -105,3 +105,28 @@ The project uses a **Staging -> Production** workflow with dynamic versioning.
 **Error: "Package not found"**
 - Ensure you are looking at the correct registry URL: `https://pypi.pkg.github.com/DOX69/simple`.
 - If installing a beta version, ensure you use the `--pre` flag.
+
+---
+
+## 📅 Version Management
+
+### Check Available Versions
+To see all versions available in the registry:
+
+```bash
+uv pip index versions aph-cli
+```
+
+### Install Specific Version
+You can pin a specific version (Production or Beta) if needed:
+
+```bash
+# Install a specific production version
+uv pip install aph-cli==0.1.3
+
+# Install a specific beta version
+uv pip install aph-cli==0.1.4.dev1
+```
+
+### Version History
+See the [CHANGELOG.md](../CHANGELOG.md) for a detailed history of changes in each version.
