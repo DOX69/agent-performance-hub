@@ -102,3 +102,9 @@ Action:
 3. Updating `OFFICIAL_SOURCES.md`.
 4. Running audit script and pytest.
 Registry updated. PR created."
+
+## 📝 Requested Skills (TODO)
+<!-- Users: Add skills you tried to search for but couldn't find here. -->
+<!-- Jules: When running weekly maintenance, process this list, create skills using expert-skill-creator, and remove them from here. -->
+
+- [ ] (Example) `kubernetes-operator-dev`: A skill for building K8s operators with Python/Go.
