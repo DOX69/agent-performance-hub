@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.3] - 2026-06-12 (Planned)
+## [0.1.3] - 2026-02-20 (Planned)
 ### Added
 - **Private Registry Support**: Configured package for distribution via private GitHub Packages registry (`aph-cli`).
 - **Dynamic Versioning**: Integrated `setuptools-scm` to manage versions via Git tags automatically.
@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Package Rename**: Renamed package from `aph` to `aph-cli` in `pyproject.toml`.
 - **Tests**: Updated CLI version test to support dynamic version strings.
 
-## [0.1.2] - 2026-06-11
+## [0.1.2] - 2026-02-16
 ### Added
 - Initial release of Agent Performance Hub (APH).
 - Core skills: `brainstorming`, `git-pushing`, `expert-skill-creator`, `clean-code`, `systematic-debugging`, `verification-before-completion`.

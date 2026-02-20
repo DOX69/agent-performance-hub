@@ -267,4 +267,4 @@ Private repository — access by invitation only.
 
 ---
 
-**Last updated**: 2026-06-11 | See [CHANGELOG.md](CHANGELOG.md) for version history.
+**Last updated**: 2026-02-16 | See [CHANGELOG.md](CHANGELOG.md) for version history.

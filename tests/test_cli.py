@@ -23,7 +23,7 @@ def isolated_runner(tmp_path):
 
 
 class TestVersion:
-    """Verify  command."""
+    """Verify aph version command."""
 
     def test_shows_version(self, runner):
         result = runner.invoke(main, ["version"])
@@ -36,7 +36,7 @@ class TestVersion:
 
 
 class TestHelp:
-    """Verify  output."""
+    """Verify aph --help  output."""
 
     def test_main_help(self, runner):
         result = runner.invoke(main, ["--help"])
@@ -101,7 +101,7 @@ class TestHelp:
 
 
 class TestInit:
-    """Verify  command."""
+    """Verify aph init command."""
 
     def test_init_creates_agent_dir(self, isolated_runner, monkeypatch):
         runner, tmp_path = isolated_runner
@@ -128,7 +128,7 @@ class TestInit:
 
 
 class TestList:
-    """Verify  command."""
+    """Verify aph list command."""
 
     def test_list_all_skills(self, runner):
         result = runner.invoke(main, ["list"])
@@ -156,7 +156,7 @@ class TestList:
 
 
 class TestSearch:
-    """Verify  command."""
+    """Verify aph search command."""
 
     def test_search_existing(self, runner):
         result = runner.invoke(main, ["search", "docker"])
@@ -170,7 +170,7 @@ class TestSearch:
 
 
 class TestAdd:
-    """Verify  command."""
+    """Verify aph add command."""
 
     def test_add_requires_init(self, isolated_runner, monkeypatch):
         runner, tmp_path = isolated_runner
@@ -205,7 +205,7 @@ class TestAdd:
 
 
 class TestRemove:
-    """Verify  command."""
+    """Verify aph remove command."""
 
     def test_remove_requires_init(self, isolated_runner, monkeypatch):
         runner, tmp_path = isolated_runner
@@ -223,7 +223,7 @@ class TestRemove:
 
 
 class TestUpdate:
-    """Verify  command."""
+    """Verify aph update command."""
 
     def test_update_requires_init(self, isolated_runner, monkeypatch):
         runner, tmp_path = isolated_runner
@@ -248,7 +248,7 @@ class TestUpdate:
 
 
 class TestInfo:
-    """Verify  command."""
+    """Verify aph info command."""
 
     def test_info_existing_skill(self, runner):
         result = runner.invoke(main, ["info", "brainstorming"])
