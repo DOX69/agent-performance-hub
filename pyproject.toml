@@ -3,8 +3,8 @@ requires = ["setuptools>=68.0", "setuptools-scm>=8.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "aph"
-version = "0.1.2"
+name = "aph-cli"
+dynamic = ["version"]
 description = "Agent Performance Hub — CLI tool for managing AI agent skills across your projects"
 readme = "README.md"
 license = {text = "MIT"}
@@ -44,7 +44,9 @@ include-package-data = true
 [tool.setuptools.package-dir]
 "aph.bundled" = ".agent"
 
-
 [tool.setuptools.package-data]
 aph = ["**/*"]
 "aph.bundled" = ["**/*"]
+
+[tool.setuptools_scm]
+version_file = "aph/_version.py"

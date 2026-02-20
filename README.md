@@ -27,6 +27,7 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 - [📊 Metrics](#-metrics)
 - [🤝 Collaboration](#-collaboration)
 - [⚖️ License](#-license)
+- [📅 Changelog](CHANGELOG.md)
 
 ---
 
@@ -34,16 +35,18 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 
 ### 1. Install
 
+**Note:** Since this is a private package, you must configure authentication first.
+👉 **[Read the Setup Guide](docs/REGISTRY_SETUP.md)**
+
 ```bash
 # Recommended: Modern setup using 'uv'
-# 1. Install uv (if not present): https://docs.astral.sh/uv/getting-started/installation/
-# 2. Setup your project and install APH
+# 1. Install uv: https://docs.astral.sh/uv/
 uv init
 uv venv .venv
-# On Windows (PowerShell/Bash):
-source .venv/Scripts/activate
-# Then install APH
-uv pip install git+https://github.com/DOX69/agent-performance-hub.git
+source .venv/bin/activate  # Windows: .venv/Scripts/activate
+
+# 2. Install APH CLI
+uv pip install aph-cli
 ```
 
 ### 2. Initialize your project
@@ -146,8 +149,8 @@ Browse all: `aph list` or `aph list --category <name>`
 ## 🔄 Updating Skills
 
 ```bash
-# Update the aph package itself
-uv pip install --upgrade git+https://github.com/DOX69/agent-performance-hub.git
+# Update the aph-cli package itself
+uv pip install --upgrade aph-cli
 
 # Update all installed skills in your project to latest
 aph update
@@ -155,8 +158,6 @@ aph update
 # Update a specific skill
 aph update docker-expert
 ```
-
----
 
 ## 🛠️ Requirements
 
@@ -266,4 +267,4 @@ Private repository — access by invitation only.
 
 ---
 
-**Last updated**: 2026-06-11 | **aph** v0.1.2
+**Last updated**: 2026-02-16 | See [CHANGELOG.md](CHANGELOG.md) for version history.
