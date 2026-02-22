@@ -1,6 +1,6 @@
 [
   {
-    "date": "2026-06-11",
+    "date": "2026-02-16",
     "source": "Anthropic Research",
     "title": "Agentic Coding Trends Report 2026",
     "url": "https://resources.anthropic.com/2026-agentic-coding-trends-report",
@@ -9,7 +9,7 @@
     "status": "Actioned"
   },
   {
-    "date": "2026-06-11",
+    "date": "2026-02-16",
     "source": "Anthropic News",
     "title": "Claude 3.7 Sonnet & Claude Code",
     "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
@@ -18,7 +18,7 @@
     "status": "Logged"
   },
   {
-    "date": "2026-06-11",
+    "date": "2026-02-16",
     "source": "Google DeepMind",
     "title": "Veo 3.1 & Gemini Updates",
     "url": "https://blog.google/technology/ai/gemini-updates",
@@ -27,7 +27,7 @@
     "status": "Logged"
   },
   {
-    "date": "2026-06-11",
+    "date": "2026-02-16",
     "source": "EzInsights AI",
     "title": "Best Practices for Building Robust Text-to-SQL Agents",
     "url": "https://medium.com/@ezinsightsai/best-practices-for-building-robust-text-to-sql-agents-f81d4c4ea6b3",

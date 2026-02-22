@@ -442,8 +442,9 @@ def uninstall(force):
     from .installer import uninstall_aph as installer_uninstall_aph
 
     if not force:
-        console.print(
-            "[bold red]WARNING: This will remove the .agent/ directory and uninstall the 'aph' package.[/]"
+        click.secho(
+            "WARNING: This will remove the .agent/ directory and uninstall the 'aph' package.",
+            fg="red", bold=True
         )
         if not click.confirm("Are you sure you want to proceed?"):
             console.print("[dim]Cancelled.[/]")

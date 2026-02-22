@@ -1,10 +1,11 @@
 # 🚀 APH — Agent Performance Hub
 
-![Tests](https://img.shields.io/badge/Tests-110%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-122%20passed-brightgreen)
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
 ![Skills](https://img.shields.io/badge/Skills-241-blue)
 ![Status](https://img.shields.io/badge/Status-Private-orange)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--12-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--22-blue)
+![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.3-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**
 
@@ -24,9 +25,11 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 - [🧪 Development & Testing](#-development--testing)
 - [🤖 Automated Maintenance](#-automated-maintenance)
 - [📝 Adding New Skills](#-adding-new-skills)
+- [📚 Documentation](#-documentation)
 - [📊 Metrics](#-metrics)
 - [🤝 Collaboration](#-collaboration)
 - [⚖️ License](#-license)
+- [📅 Changelog](CHANGELOG.md)
 
 ---
 
@@ -34,16 +37,18 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 
 ### 1. Install
 
+**Note:** Since this is a private package, you must configure authentication first.
+👉 **[Read the Setup Guide](docs/REGISTRY_SETUP.md)**
+
 ```bash
 # Recommended: Modern setup using 'uv'
-# 1. Install uv (if not present): https://docs.astral.sh/uv/getting-started/installation/
-# 2. Setup your project and install APH
+# 1. Install uv: https://docs.astral.sh/uv/
 uv init
 uv venv .venv
-# On Windows (PowerShell/Bash):
-source .venv/Scripts/activate
-# Then install APH
-uv pip install git+https://github.com/DOX69/agent-performance-hub.git
+source .venv/bin/activate  # Windows: .venv/Scripts/activate
+
+# 2. Install APH CLI
+uv pip install aph-cli
 ```
 
 ### 2. Initialize your project
@@ -80,6 +85,7 @@ aph add docker-expert         # Install a skill
 | `aph update` | Update all installed skills |
 | `aph update <skill>` | Update a specific skill |
 | `aph info <skill>` | Show detailed info about a skill |
+| `aph uninstall` | Completely remove APH and `.agent/` from project |
 | `aph version` | Show CLI version |
 
 > [!TIP]
@@ -146,8 +152,8 @@ Browse all: `aph list` or `aph list --category <name>`
 ## 🔄 Updating Skills
 
 ```bash
-# Update the aph package itself
-uv pip install --upgrade git+https://github.com/DOX69/agent-performance-hub.git
+# Update the aph-cli package itself
+uv pip install --upgrade aph-cli
 
 # Update all installed skills in your project to latest
 aph update
@@ -155,8 +161,6 @@ aph update
 # Update a specific skill
 aph update docker-expert
 ```
-
----
 
 ## 🛠️ Requirements
 
@@ -242,6 +246,21 @@ This repo is maintained weekly by **Jules** (automated agent):
 
 ---
 
+## 📚 Documentation
+
+For deeper insights into the project, consult the following guides:
+
+| File | Description |
+|------|-------------|
+| [HOW_TO_USE.md](docs/HOW_TO_USE.md) | Practical guide to using `aph` across your projects |
+| [EXAMPLES.md](docs/EXAMPLES.md) | Real-world examples of interactions using different skills |
+| [SKILL_ANATOMY.md](docs/SKILL_ANATOMY.md) | Deep dive into the structure and elements of a standard skill |
+| [VISUAL_GUIDE.md](docs/VISUAL_GUIDE.md) | Visual representation of the repository, workflows, and skills |
+| [SETUP_SECRETS.md](docs/SETUP_SECRETS.md) | Guide to configuring API keys for workflows (e.g., Google Gemini) |
+| [REGISTRY_SETUP.md](docs/REGISTRY_SETUP.md) | Quick guide on authentication and connection to the GitHub package registry |
+
+---
+
 ## 📊 Metrics
 
 - **241 skills** across 11 categories
@@ -266,4 +285,4 @@ Private repository — access by invitation only.
 
 ---
 
-**Last updated**: 2026-06-11 | **aph** v0.1.2
+**Last updated**: 2026-02-16 | See [CHANGELOG.md](CHANGELOG.md) for version history.

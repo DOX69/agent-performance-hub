@@ -1,87 +1,53 @@
 # How To Use `agent-performance-hub`
 
-This guide explains how to leverage the skills, knowledge, and methodology from this repository in your other projects (e.g., specific web apps, data pipelines).  
+This guide explains how to leverage the skills, knowledge, and methodology from this repository in your other projects.
 
-**I recommend using strategy 4 for new projects using uv**.
+The **recommended and most efficient way** to use these skills is via the `aph` CLI.
 
-## Strategy 1: The "Reference" Approach (Recommended for Antigravity)
+## Installation using `uv` (Recommended)
 
-In Google Antigravity or your IDE, simple keep this repository cloned in a known location (e.g., `~/code/agent-performance-hub`).
-
-When working on another project, you can instruct your agent:
-
-> "I want to implement a new feature. Please refer to `~/code/agent-performance-hub/.agent/skills/code-generation/web-app-vibe-coding.md` for the coding style."
-
-**Pros:**
-- Single source of truth.
-- Updates to the hub are immediately available.
-- No file duplication.
-
-## Strategy 2: Git Submodules (For Strict Versioning)
-
-If you want to enforce that a project uses a specific version of your agent skills:
-
-1.  **Add submodule**:
-    ```bash
-    cd my-new-project
-    git submodule add https://github.com/DOX69/agent-performance-hub.git .agent-hub
-    ```
-
-2.  **Symlink relevant skills**:
-    ```bash
-    mkdir -p .agent/skills
-    ln -s ../.agent-hub/.agent/skills/code-generation/web-app-vibe-coding.md .agent/skills/vibe-coding.md
-    ```
-
-**Pros:**
-- Project A can use v1.0 skills while Project B uses v2.0.
-- reproducible builds.
-
-**Cons:**
-- More complex git workflow.
-
-## Strategy 3: Copy-Paste (Simple & Custom)
-
-Simply copy the relevant `.agent` folder or specific Markdown files into your new project.
-
-```bash
-cp -r ~/code/agent-performance-hub/.agent/skills/code-generation/web-app-vibe-coding.md ./docs/guidelines.md
-```
-
-**Pros:**
-- Simple.
-- Allows project-specific customization without affecting the hub.
-
-**Cons:**
-- Drift from the main hub updates.
-
-## Strategy 4: Start from Scratch with `uv` (Fastest)
-
-If you are starting a completely new project and want a managed virtual environment:
+To set up the skills in a new or existing project, use `uv` for a fast installation:
 
 1. **Install uv** (if you haven't): [Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
 2. **Initialize and Install**:
     ```bash
-    mkdir my-new-agent-project
-    cd my-new-agent-project
-    uv init
+    # Ensure you are in your project directory
+    uv init  # If it's a new Python project
     uv venv .venv
-    source .venv/Scripts/activate  # On Windows: .venv\Scripts\activate
+    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
     
-    uv pip install git+https://github.com/DOX69/agent-performance-hub.git
+    # Install the CLI tool
+    uv pip install aph-cli
+    
+    # Initialize the basic skills framework
     aph init
     ```
 
----
+When you run `aph init`, this creates an `.agent/` folder containing core skills like `@brainstorming` and `@clean-code`.
 
-## Retrieving Specific Skills on Demand
+## Adding Specific Skills
 
-If you are in an IDE and want to "install" a skill:
+Once initialized, use the CLI to add the specialized skills you need for your task:
 
-1.  **List available skills**:
-    Run `ls ~/code/agent-performance-hub/.agent/skills/**/*.md`
+1. **Search for a skill**:
+    ```bash
+    aph list
+    aph search data-pipelines
+    ```
 
-2.  **Read/Apply**:
-    Ask your agent: "Load the 'data-pipelines' skill from the agent-performance-hub."
+2. **Install the skill**:
+    ```bash
+    aph add data-pipelines
+    ```
 
-The agent will read the file and adapt its behavior instantly.
+3. **Use the skill**:
+   In your AI Assistant (like Antigravity or Claude Code), you can simply mention the installed skill.
+   
+   > "I want to implement a new feature. Please refer to `@data-pipelines` (or `.agent/skills/data-pipelines/SKILL.md`) for the patterns."
+
+The agent will read the local file and adapt its behavior instantly.
+
+## Why use the CLI instead of Copy-Pasting?
+- **Updates**: Run `aph update` at any time to pull the latest improvements from the centralized hub.
+- **Consistency**: The `aph` CLI guarantees you get the complete structure for a skill, including example scripts, templates, and constraints.
+- **Cleanliness**: Avoids adding hundreds of skills to your project by cherry-picking only what you need.

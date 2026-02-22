@@ -4,6 +4,20 @@
 
 ---
 
+## How it works
+
+Before running these examples, make sure to add the skills to your project using the `aph` CLI:
+
+```bash
+# Example: Adding specific skills for frontend and backend
+aph add react-patterns
+aph add nodejs-best-practices
+```
+
+Once added, you can simply @mention the skill (like `@react-patterns`) or direct your AI to use the skill file.
+
+---
+
 ## Example 1: Designing a Feature with @brainstorming
 
 ### The Scenario
