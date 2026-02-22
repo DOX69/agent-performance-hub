@@ -19,6 +19,6 @@ Required for: **Gemini 3 testing** and **Token Benchmarking**.
 5.  Click **Add secret**.
 
 
-## 3. Other Secrets
+## 2. Other Secrets
 - `CTX7_API_KEY`: If using Context7 features in CI.
 - `N8N_WEBHOOK_URL`: If integrating with n8n workflows.

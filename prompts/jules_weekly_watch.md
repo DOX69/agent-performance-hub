@@ -40,15 +40,19 @@ When a valuable skill is found in external sources (like `claude-code-skills`):
 - **New Feature**: If a new model capability is released (e.g., "Gemini 3 improves JSON mode"), update `.agent/skills/code-generation/` to recommend it.
 - **Deprecation**: If a pattern is now obsolete (e.g., "Manual chain-of-thought is no longer needed for Model X"), mark the pattern as `DEPRECATED` in `.agent/methodology/`.
 
-**Step C: Verification**
-- Run the benchmark script `python scripts/calc_token_efficiency.py` to see if new patterns differ from baselines.
-- Run `python -m pytest tests/ -v` to ensure all APH package tests pass. **Do NOT proceed to Step D if any test fails.** Fix failing tests first.
+**Step C: Documentation Sync**
+- Check the `docs/` directory against `README.md` (which is the main source of truth).
+- Ensure all documents in `docs/` are up-to-date and cross-referenced in `README.md`. Modify and update any obsolete files to avoid confusion.
 
-**Step D: Reporting**
+**Step D: Verification**
+- Run the benchmark script `python scripts/calc_token_efficiency.py` to see if new patterns differ from baselines.
+- Run `python -m pytest tests/ -v` to ensure all APH package tests pass. **Do NOT proceed to Step E if any test fails.** Fix failing tests first.
+
+**Step E: Reporting**
 - Generate a summary PR with the title: `chore(watch): Weekly updates [YYYY-WW]`.
 - Description: "Analyzed X sources. Added Y new insights. Updated Z skills. APH registry: N total skills."
 
-**Step E: APH Package Maintenance (CRITICAL)**
+**Step F: APH Package Maintenance (CRITICAL)**
 This step ensures the `aph` CLI package stays up-to-date and functional.
 
 1. **Regenerate the skill registry**:

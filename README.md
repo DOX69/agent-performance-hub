@@ -24,6 +24,7 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 - [🧪 Development & Testing](#-development--testing)
 - [🤖 Automated Maintenance](#-automated-maintenance)
 - [📝 Adding New Skills](#-adding-new-skills)
+- [📚 Documentation](#-documentation)
 - [📊 Metrics](#-metrics)
 - [🤝 Collaboration](#-collaboration)
 - [⚖️ License](#-license)
@@ -240,6 +241,21 @@ This repo is maintained weekly by **Jules** (automated agent):
 3. Regenerate registry: `python scripts/generate_registry.py`
 4. Run tests: `python -m pytest tests/ -v`
 5. Push and create PR
+
+---
+
+## 📚 Documentation
+
+For deeper insights into the project, consult the following guides:
+
+| File | Description |
+|------|-------------|
+| [HOW_TO_USE.md](docs/HOW_TO_USE.md) | Practical guide to using `aph` across your projects |
+| [EXAMPLES.md](docs/EXAMPLES.md) | Real-world examples of interactions using different skills |
+| [SKILL_ANATOMY.md](docs/SKILL_ANATOMY.md) | Deep dive into the structure and elements of a standard skill |
+| [VISUAL_GUIDE.md](docs/VISUAL_GUIDE.md) | Visual representation of the repository, workflows, and skills |
+| [SETUP_SECRETS.md](docs/SETUP_SECRETS.md) | Guide to configuring API keys for workflows (e.g., Google Gemini) |
+| [REGISTRY_SETUP.md](docs/REGISTRY_SETUP.md) | Quick guide on authentication and connection to the GitHub package registry |
 
 ---
 

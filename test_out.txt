@@ -1,0 +1,31 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.0.2, pluggy-1.6.0
+rootdir: C:\Users\ggrft\PycharmProjects\agent-performance-hub
+configfile: pyproject.toml
+plugins: cov-7.0.0
+collected 3 items
+
+tests\test_uninstall.py ..F                                              [100%]
+
+================================== FAILURES ===================================
+_________________________ test_uninstall_cli_command __________________________
+
+    def test_uninstall_cli_command():
+        from click.testing import CliRunner
+        from aph.cli import main
+    
+        runner = CliRunner()
+    
+        # Mock uninstall_aph to return success
+        with patch("aph.installer.uninstall_aph", return_value=(True, "Uninstalled APH")) as mock_uninstall:
+            # Test with confirmation (input "y")
+            result = runner.invoke(main, ["uninstall"], input="y\n")
+            assert result.exit_code == 0
+>           assert "This will remove the .agent/ directory and uninstall the 'aph' package." in result.output
+E           assert "This will remove the .agent/ directory and uninstall the 'aph' package." in "WARNING: This will remove the .agent/ directory and uninstall the 'aph' \\npackage.\\nAre you sure you want to proceed? [y/N]: y\\n\u2705 Uninstalled APH\\n"
+E            +  where "WARNING: This will remove the .agent/ directory and uninstall the 'aph' \\npackage.\\nAre you sure you want to proceed? [y/N]: y\\n\u2705 Uninstalled APH\\n" = <Result okay>.output
+
+tests\test_uninstall.py:58: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_uninstall.py::test_uninstall_cli_command - assert "This wil...
+========================= 1 failed, 2 passed in 0.26s =========================

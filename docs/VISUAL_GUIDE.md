@@ -28,35 +28,26 @@
 ## 📦 Repository Structure (Visual)
 
 ```
-antigravity-awesome-skills/
+agent-performance-hub/
 │
 ├── 📄 README.md                    ← Overview & skill list
-├── 📄 GETTING_STARTED.md           ← Start here! (NEW)
-├── 📄 CONTRIBUTING.md        ← How to contribute (NEW)
+├── 📄 pyproject.toml               ← Python package config
 │
-├── 📁 skills/                      ← All 179 skills live here
+├── 📁 aph/                         ← The CLI application
 │   │
-│   ├── 📁 brainstorming/
-│   │   └── 📄 SKILL.md             ← Skill definition
-│   │
-│   ├── 📁 stripe-integration/
-│   │   ├── 📄 SKILL.md
-│   │   └── 📁 examples/            ← Optional extras
-│   │
-│   ├── 📁 react-best-practices/
-│   │   ├── 📄 SKILL.md
-│   │   ├── 📁 rules/
-│   │   └── 📄 README.md
-│   │
-│   └── ... (176 more skills)
+│   ├── 📄 cli.py                   ← Main CLI logic
+│   └── ... 
 │
-├── 📁 scripts/                     ← Validation & management
-│   ├── validate_skills.py
-│   └── generate_index.py
+├── 📁 .agent/                      ← Bundled skills
+│   ├── 📄 skills_registry.json     ← The registry
+│   └── 📁 skills/                  ← Core skills
 │
-└── 📁 docs/                        ← Documentation (NEW)
+├── 📁 scripts/                     ← Management
+│   └── 📄 generate_registry.py
+│
+└── 📁 docs/                        ← Documentation
     ├── 📄 SKILL_ANATOMY.md         ← How skills work
-    └── 📄 VISUAL_GUIDE.md    ← This file!
+    └── 📄 VISUAL_GUIDE.md          ← This file!
 ```
 
 ---
@@ -65,7 +56,7 @@ antigravity-awesome-skills/
 
 ```
 ┌──────────────┐
-│ 1. INSTALL   │  Copy skills to .agent/skills/
+│ 1. INSTALL   │  Run 'aph add <skill-name>'
 └──────┬───────┘
        │
        ↓
@@ -75,7 +66,7 @@ antigravity-awesome-skills/
        │
        ↓
 ┌──────────────┐
-│ 3. LOAD      │  AI reads SKILL.md file
+│ 3. LOAD      │  AI reads corresponding SKILL.md
 └──────┬───────┘
        │
        ↓
