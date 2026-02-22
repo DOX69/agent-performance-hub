@@ -30,16 +30,15 @@ jobs:
 
       - name: Install build tools
         run: |
-          uv pip install --system build twine
+          uv pip install --system build
 
       - name: Build package
         run: |
           python -m build
 
-      - name: Publish to GitHub Packages
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
         env:
-          TWINE_USERNAME: ${{ github.actor }}
-          TWINE_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-          TWINE_REPOSITORY_URL: https://pypi.pkg.github.com/DOX69/
-        run: |
-          twine upload dist/* --non-interactive --verbose
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
