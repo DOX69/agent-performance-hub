@@ -1,132 +1,103 @@
-# 📦 Registry Setup & Installation Guide
+# 📦 Installation Guide
 
-This guide explains how to install `aph-cli` from our private GitHub Packages registry.
+This guide explains how to install `aph-cli` directly from our private GitHub repository, as the package is distributed via GitHub Releases and GitHub Actions Artifacts instead of a traditional PyPI registry.
 
 ---
 
 ## 🔑 1. Authentication (One-time setup)
 
-Since this package is hosted on a private registry, you need to authenticate using a GitHub Personal Access Token (PAT).
+Since this repository is private, standard installation commands (`uv pip install git+https...`) will prompt for your GitHub credentials. We recommend using a GitHub Personal Access Token (PAT) for seamless installation.
 
 ### Step A: Generate a Token
 1. Go to **GitHub Settings** -> **Developer settings** -> **Personal access tokens** -> **Tokens (classic)**.
 2. Click **Generate new token (classic)**.
 3. Name it "APH CLI Access".
 4. Select the following scope:
-   - `read:packages` (Required to download the package)
+   - `repo` (Full control of private repositories, necessary to read private code)
 5. Click **Generate token** and copy it immediately.
 
 ### Step B: Configure Environment
-We recommend setting up environment variables to handle authentication securely.
+You can embed the token directly into the installation URL. Set it as an environment variable to keep it secure:
 
 **Mac/Linux (Zsh/Bash):**
-Add this to your `~/.zshrc` or `~/.bashrc`:
-
 ```bash
-# Replace YOUR_GITHUB_USERNAME and YOUR_PAT_TOKEN
-export UV_INDEX_URL="https://YOUR_GITHUB_USERNAME:YOUR_PAT_TOKEN@pypi.pkg.github.com/DOX69/simple"
-```
-
-Then reload your shell:
-```bash
-source ~/.zshrc
+export GITHUB_PAT="YOUR_PAT_TOKEN"
 ```
 
 **Windows (PowerShell):**
 ```powershell
-[System.Environment]::SetEnvironmentVariable("UV_INDEX_URL", "https://YOUR_GITHUB_USERNAME:YOUR_PAT_TOKEN@pypi.pkg.github.com/DOX69/simple", "User")
+$env:GITHUB_PAT="YOUR_PAT_TOKEN"
 ```
+
+*(Alternatively, if you have SSH keys configured for GitHub, you can use `git+ssh` instead of `git+https` without needing a PAT).*
 
 ---
 
 ## 🚀 2. Installation
 
-Once authentication is set up, you can install `aph-cli` directly.
+You can install `aph-cli` directly from the Git repository.
 
 ### Install Stable Version (Production)
-This installs the latest tagged release (e.g., `v0.1.3`).
+This installs the latest code from the `main` branch.
 
+**Using HTTPS & PAT:**
 ```bash
-uv pip install aph-cli
+uv pip install "git+https://${GITHUB_PAT}@github.com/DOX69/agent-performance-hub.git@main"
 ```
+
+**Using SSH (if configured):**
+```bash
+uv pip install "git+ssh://git@github.com/DOX69/agent-performance-hub.git@main"
+```
+
+*(You can also manually download the `.whl` file from the **Releases** page on GitHub and run `uv pip install <path-to-file.whl>`)*
 
 ### Install Beta Version (Staging)
 This installs the latest development version from the `staging` branch.
 
+**Using HTTPS & PAT:**
 ```bash
-# Install the latest pre-release
-uv pip install --pre aph-cli
-
-# Or verify available versions
-uv pip index versions aph-cli
+uv pip install "git+https://${GITHUB_PAT}@github.com/DOX69/agent-performance-hub.git@staging"
 ```
+
+**Using SSH (if configured):**
+```bash
+uv pip install "git+ssh://git@github.com/DOX69/agent-performance-hub.git@staging"
+```
+
+*(You can also download the `aph-package` artifact from the latest successful **GitHub Actions** run on the `staging` branch, extract the zip, and install the `.whl` file directly).*
 
 ---
 
 ## 🔄 3. Update
 
-To update to the latest version:
+To update to the latest version, run the same `install` command but add the `--upgrade` (or `-U`) flag to force `uv pip` to fetch the latest commit.
 
 ```bash
-uv pip install --upgrade aph-cli
+uv pip install --upgrade "git+ssh://git@github.com/DOX69/agent-performance-hub.git@main"
 ```
 
 ---
 
 ## 🛠️ Release Process (For Maintainers)
 
-The project uses a **Staging -> Production** workflow with dynamic versioning.
+The project uses a **Staging -> Production** workflow. We no longer use GitHub Packages PyPI due to lack of native support for the PyPI protocol.
 
 ### 1. Develop & Beta Release
 - Create a feature branch.
 - Merge your changes into the `staging` branch.
-- **Action**: GitHub Actions automatically builds and publishes a **Beta** version (e.g., `0.1.3.dev14+g7a8b9c`).
-- **Test**: Install the beta version locally to verify:
+- **Action**: GitHub Actions automatically builds the package and attaches it as a downloadable **Artifact** to the workflow run.
+- **Test**: Users can install it directly from the staging branch:
   ```bash
-  uv pip install --pre --upgrade aph-cli
+  uv pip install --upgrade "git+ssh://git@github.com/DOX69/agent-performance-hub.git@staging"
   ```
 
 ### 2. Production Release
 - Once the Beta is verified on `staging`:
 - Merge `staging` into `main`.
 - Create a new tag on `main` and push it to origin (e.g., `v0.1.3`).
-- **Action**: GitHub Actions automatically builds and publishes the **Production** version (e.g., `0.1.3`).
-- **Users**: Can now run `uv pip install --upgrade aph-cli`.
-
----
-
-## ❓ Troubleshooting
-
-**Error: "401 Unauthorized"**
-- Verify your PAT has `read:packages` scope.
-- Check if your `UV_INDEX_URL` is correctly set with `echo $UV_INDEX_URL`.
-- Ensure you are using your GitHub username, not your email.
-
-**Error: "Package not found"**
-- Ensure you are looking at the correct registry URL: `https://pypi.pkg.github.com/DOX69/simple`.
-- If installing a beta version, ensure you use the `--pre` flag.
-
----
-
-## 📅 Version Management
-
-### Check Available Versions
-To see all versions available in the registry:
-
-```bash
-uv pip index versions aph-cli
-```
-
-### Install Specific Version
-You can pin a specific version (Production or Beta) if needed:
-
-```bash
-# Install a specific production version
-uv pip install aph-cli==0.1.3
-
-# Install a specific beta version
-uv pip install aph-cli==0.1.4.dev1
-```
-
-### Version History
-See the [CHANGELOG.md](../CHANGELOG.md) for a detailed history of changes in each version.
+- **Action**: GitHub Actions automatically builds the package and attaches it as a release asset to the new **GitHub Release**.
+- **Users**: Can now install from `main` or download the release assets manually:
+  ```bash
+  uv pip install --upgrade "git+ssh://git@github.com/DOX69/agent-performance-hub.git@main"
+  ```
