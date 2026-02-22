@@ -20,32 +20,5 @@
 - Group by feature rather than type where possible.
 
 ## Global Rules
-### Test-Driven Development (TDD) using test-driven-development skill
-> [!IMPORTANT]
-> When implementing a new feature or fixing a bug, you **MUST** follow this workflow:
-> 1. **Create a failing test first** (Red) - Prove the feature is missing or the bug exists.
-> 2. **Implement the code** (Green) - Write the minimal code to make the test pass.
-> 3. **Verify locally** - Run the specific test case.
-> 4. **Verify suite** - Run all tests (`pytest tests/`) to ensure no regressions.
-
-### Test Preservation
-> [!CAUTION]
-> **NEVER** modify or remove a failing test that is already in the suite to make the suite pass.
-> - If a test fails, the **implementation** is wrong, not the test.
-> - You must **ALWAYS** ask for user validation before modifying any existing test logic.
-> - Tests are the source of truth.
-
-### Agent Usage & Skill Management
-> [!IMPORTANT]
-> **Always prioritize `aph` for skills.**
-> - Use `aph list` and `aph search <term>` to find the best skills for your tasks.
-> - Use `aph --help` to understand command usage.
-> - **Always activate the virtual environment** (`source .venv/bin/activate`) before using `aph`.
-
-> [!NOTE]
-> **Missing a Skill?**
-> If an `aph search` fails to find an essential skill:
-> 1. Do not create it manually unless you are the maintainer.
-> 2. Add the missing skill to the **TODO list** in `prompts/jules_weekly_watch.md` under the "Requested Skills" section.
-> 3. Provide a brief description of what is needed.
-> 4. Jules will create it during the next weekly maintenance cycle using `expert-skill-creator` to ensure high quality and avoid duplicates.
+The global rules for AI agents have been moved to [`.agent/rules/global-rules.md`](file:///c:/Users/ggrft/PycharmProjects/agent-performance-hub/.agent/rules/global-rules.md).
+Please refer to the `.agent/rules/` directory for all agent-specific rules, behaviors, and standard operating procedures.
