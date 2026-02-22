@@ -84,6 +84,7 @@ aph add docker-expert         # Install a skill
 | `aph update` | Update all installed skills |
 | `aph update <skill>` | Update a specific skill |
 | `aph info <skill>` | Show detailed info about a skill |
+| `aph uninstall` | Completely remove APH and `.agent/` from project |
 | `aph version` | Show CLI version |
 
 > [!TIP]
