@@ -317,6 +317,8 @@ def uninstall_aph(
     """
     import subprocess
     import shutil
+    import sys
+    import site
 
     agent_dir = get_project_agent_dir(project_path)
     
@@ -325,9 +327,57 @@ def uninstall_aph(
         shutil.rmtree(agent_dir)
         
     # Uninstall package
-    try:
-        subprocess.check_call(["pip", "uninstall", "aph", "-y"])
-    except subprocess.CalledProcessError as e:
-        return False, f"Failed to uninstall aph package: {e}"
+    success = False
+    error_msg = ""
+
+    commands = [
+        [sys.executable, "-m", "pip", "uninstall", "aph-cli", "-y"],
+        ["pip", "uninstall", "aph-cli", "-y"],
+        ["uv", "pip", "uninstall", "aph-cli"],
+    ]
+
+    for cmd in commands:
+        try:
+            # DEVNULL hides output to keep the CLI clean
+            subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            success = True
+            break
+        except (subprocess.CalledProcessError, FileNotFoundError) as e:
+            error_msg = str(e)
+            continue
+
+    # Fallback to manual removal if pip commands fail
+    # This ensures the aph folder in uv venv/site-packages and aph_cli-* are removed
+    if not success:
+        try:
+            site_packages = site.getsitepackages()
+            if hasattr(site, "getusersitepackages"):
+                site_packages.append(site.getusersitepackages())
+
+            removed_something = False
+            for sp in site_packages:
+                sp_path = Path(sp)
+                if not sp_path.exists():
+                    continue
+                
+                # Remove main module directory
+                aph_dir = sp_path / "aph"
+                if aph_dir.exists() and aph_dir.is_dir():
+                    shutil.rmtree(aph_dir)
+                    removed_something = True
+
+                # Remove distribution info directories
+                for meta_dir in sp_path.glob("aph_cli-*"):
+                    if meta_dir.is_dir():
+                        shutil.rmtree(meta_dir)
+                        removed_something = True
+
+            if removed_something:
+                success = True
+        except Exception as e:
+            error_msg = f"Fallback manual removal also failed: {e}"
+
+    if not success:
+        return False, f"Failed to uninstall aph-cli package: {error_msg}"
         
     return True, "Uninstalled APH and removed .agent/ directory."

@@ -22,7 +22,8 @@ def test_uninstall_aph_removes_agent_dir_and_calls_pip():
         assert success is True
         assert "Uninstalled" in message
         mock_rmtree.assert_called_once_with(mock_agent_dir)
-        mock_subprocess.assert_called_once_with(["pip", "uninstall", "aph", "-y"])
+        import sys
+        mock_subprocess.assert_called_once_with([sys.executable, "-m", "pip", "uninstall", "aph-cli", "-y"], stdout=-3, stderr=-3)
 
 def test_uninstall_aph_handles_missing_agent_dir():
     # Setup mocks
@@ -42,7 +43,8 @@ def test_uninstall_aph_handles_missing_agent_dir():
         # Verify
         assert success is True
         mock_rmtree.assert_not_called()
-        mock_subprocess.assert_called_once_with(["pip", "uninstall", "aph", "-y"])
+        import sys
+        mock_subprocess.assert_called_once_with([sys.executable, "-m", "pip", "uninstall", "aph-cli", "-y"], stdout=-3, stderr=-3)
 
 def test_uninstall_cli_command():
     from click.testing import CliRunner
