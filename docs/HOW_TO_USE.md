@@ -47,6 +47,18 @@ Once initialized, use the CLI to add the specialized skills you need for your ta
 
 The agent will read the local file and adapt its behavior instantly.
 
+## ⚠️ Troubleshooting `uv pip install` Version Issues
+
+If you notice `aph version` reports a `.dev` version (e.g., `0.1.dev38...`) instead of the official release tag from GitHub:
+This happens because `uv` skips downloading Git tags during installation to ensure blazing-fast speed. `aph-cli` uses `setuptools_scm` to deduce the version from Git tags, so without them, it defaults to counting commits.
+
+**How to resolve this:**
+Force `uv` to resolve the literal tag by bypassing the cache:
+```bash
+uv cache clean
+uv pip install "git+https://github.com/DOX69/agent-performance-hub.git@v0.1.4"
+```
+
 ## Why use the CLI instead of Copy-Pasting?
 - **Updates**: Run `aph update` at any time to pull the latest improvements from the centralized hub.
 - **Consistency**: The `aph` CLI guarantees you get the complete structure for a skill, including example scripts, templates, and constraints.

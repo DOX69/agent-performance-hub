@@ -1,6 +1,6 @@
 # 🚀 APH — Agent Performance Hub
 
-![Tests](https://img.shields.io/badge/Tests-122%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-123%20passed-brightgreen)
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
 ![Skills](https://img.shields.io/badge/Skills-241-blue)
 ![Status](https://img.shields.io/badge/Status-Private-orange)
@@ -206,7 +206,7 @@ cd agent-performance-hub
 pip install -e .
 pip install pytest
 
-# Run tests (110 tests)
+# Run tests (123 tests)
 python -m pytest tests/ -v
 
 # Regenerate skills registry after adding new skills
@@ -231,7 +231,7 @@ This repo is maintained weekly by **Jules** (automated agent):
 
 - **Every Thursday**: Scans AI research sources for updates
 - **Registry regeneration**: `skills_registry.json` rebuilt automatically
-- **Test validation**: All 110+ tests must pass before any change
+- **Test validation**: All 123+ tests must pass before any change
 - **CI/CD**: GitHub Actions runs tests on every push and PR
 
 ---
@@ -264,7 +264,7 @@ For deeper insights into the project, consult the following guides:
 ## 📊 Metrics
 
 - **241 skills** across 11 categories
-- **110 tests** with 100% pass rate
+- **123 tests** with 100% pass rate
 - **Token Efficiency**: 67.7% reduction vs baseline
 - **Agent Autonomy**: 84%
 

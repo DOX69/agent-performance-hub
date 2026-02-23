@@ -34,6 +34,16 @@ class TestVersion:
         # The key is at least "digit.digit" at the start.
         assert re.search(r"\d+\.\d+", result.output)
 
+    def test_version_dev_fallback_format(self, runner, monkeypatch):
+        """Verify version command handles setuptools_scm dev fallback gracefully."""
+        # Mock aph.__version__ to a dev version
+        from aph import cli
+        monkeypatch.setattr(cli, "__version__", "0.1.dev38+gf54a9888e.d20260223")
+        result = runner.invoke(main, ["version"])
+        assert result.exit_code == 0
+        assert "aph v0.1.dev38+gf54a9888e.d20260223" in result.output
+        assert re.search(r"dev\d+\+g[a-f0-9]+", result.output)
+
 
 class TestHelp:
     """Verify aph --help  output."""
