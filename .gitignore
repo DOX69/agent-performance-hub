@@ -33,3 +33,5 @@ Thumbs.db
 
 # APH Generated
 .aph-manifest.json
+aph/_version.py
+
