@@ -10,6 +10,7 @@ from .config import (
     BUNDLED_DEBUG_DIR,
     BUNDLED_KNOWLEDGE_DIR,
     BUNDLED_METHODOLOGY_DIR,
+    BUNDLED_RULES_DIR,
     BUNDLED_SKILLS_DIR,
     BUNDLED_SOURCES_DIR,
     CORE_SKILLS,
@@ -19,6 +20,7 @@ from .config import (
     MANIFEST_FILE,
     METHODOLOGY_SUBDIR,
     README_AGENT_FILE,
+    RULES_SUBDIR,
     SKILLS_SUBDIR,
     SOURCES_SUBDIR,
 )
@@ -161,11 +163,12 @@ def init_project(
     # Create README_AGENT.md to guide agents
     (agent_dir / README_AGENT_FILE).write_text(README_AGENT_CONTENT, encoding="utf-8")
 
-    # Copy knowledge, methodology, debug, sources from bundled package
+    # Copy knowledge, methodology, debug, sources, rules from bundled package
     _copy_directory(BUNDLED_KNOWLEDGE_DIR, agent_dir / KNOWLEDGE_SUBDIR)
     _copy_directory(BUNDLED_METHODOLOGY_DIR, agent_dir / METHODOLOGY_SUBDIR)
     _copy_directory(BUNDLED_DEBUG_DIR, agent_dir / DEBUG_SUBDIR)
     _copy_directory(BUNDLED_SOURCES_DIR, agent_dir / SOURCES_SUBDIR)
+    _copy_directory(BUNDLED_RULES_DIR, agent_dir / RULES_SUBDIR)
 
     # Install skills
     skills_to_install = skills or CORE_SKILLS

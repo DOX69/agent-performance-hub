@@ -153,7 +153,9 @@ class TestInit:
         created_agent_dir = tmp_path / AGENT_DIR_NAME
         for bundled_dir in bundled_dirs:
             assert bundled_dir in INIT_SUBDIRS, f"Bundled directory '{bundled_dir}' is missing from INIT_SUBDIRS in config.py"
-            assert (created_agent_dir / bundled_dir).exists(), f"Directory '{bundled_dir}' was not created by aph init"
+            created_subdir = created_agent_dir / bundled_dir
+            assert created_subdir.exists(), f"Directory '{bundled_dir}' was not created by aph init"
+            assert len(list(created_subdir.iterdir())) > 0, f"Directory '{bundled_dir}' is empty, it should be populated."
 
 
 class TestList:
