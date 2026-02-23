@@ -27,6 +27,7 @@ BUNDLED_KNOWLEDGE_DIR = BUNDLED_AGENT_ROOT / "knowledge"
 BUNDLED_METHODOLOGY_DIR = BUNDLED_AGENT_ROOT / "methodology"
 BUNDLED_DEBUG_DIR = BUNDLED_AGENT_ROOT / "debug"
 BUNDLED_SOURCES_DIR = BUNDLED_AGENT_ROOT / "sources"
+BUNDLED_RULES_DIR = BUNDLED_AGENT_ROOT / "rules"
 
 # Skills registry file
 # Uses __file__ to locate registry relative to installed package location
@@ -39,6 +40,7 @@ KNOWLEDGE_SUBDIR = "knowledge"
 METHODOLOGY_SUBDIR = "methodology"
 DEBUG_SUBDIR = "debug"
 SOURCES_SUBDIR = "sources"
+RULES_SUBDIR = "rules"
 
 # Manifest file tracking installed skills
 MANIFEST_FILE = ".aph-manifest.json"
@@ -65,6 +67,7 @@ INIT_SUBDIRS = [
     METHODOLOGY_SUBDIR,
     DEBUG_SUBDIR,
     SOURCES_SUBDIR,
+    RULES_SUBDIR,
 ]
 
 # ─── GitHub Repo ──────────────────────────────────────────────────────────────

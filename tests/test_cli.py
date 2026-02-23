@@ -136,6 +136,25 @@ class TestInit:
         result = runner.invoke(main, ["init"])
         assert result.exit_code != 0
 
+    def test_init_matches_bundled_subdirs(self, isolated_runner, monkeypatch):
+        """Verify that aph init creates all subdirectories present in the bundled .agent repo."""
+        from aph.config import BUNDLED_AGENT_ROOT, INIT_SUBDIRS, AGENT_DIR_NAME
+        
+        runner, tmp_path = isolated_runner
+        monkeypatch.chdir(tmp_path)
+        result = runner.invoke(main, ["init"])
+        assert result.exit_code == 0
+        
+        # Get actual directories in the bundled .agent directory
+        bundled_dirs = [d.name for d in BUNDLED_AGENT_ROOT.iterdir() if d.is_dir() and not d.name.startswith("__")]
+        
+        # Ensure that ALL directories found in the bundled .agent are configured in INIT_SUBDIRS
+        # and are successfully created by `aph init`
+        created_agent_dir = tmp_path / AGENT_DIR_NAME
+        for bundled_dir in bundled_dirs:
+            assert bundled_dir in INIT_SUBDIRS, f"Bundled directory '{bundled_dir}' is missing from INIT_SUBDIRS in config.py"
+            assert (created_agent_dir / bundled_dir).exists(), f"Directory '{bundled_dir}' was not created by aph init"
+
 
 class TestList:
     """Verify aph list command."""

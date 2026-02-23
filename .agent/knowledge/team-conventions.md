@@ -20,5 +20,5 @@
 - Group by feature rather than type where possible.
 
 ## Global Rules
-The global rules for AI agents have been moved to [`.agent/rules/global-rules.md`](file:///c:/Users/ggrft/PycharmProjects/agent-performance-hub/.agent/rules/global-rules.md).
+The global rules for AI agents have been moved to `.agent/rules/global-rules.md`.
 Please refer to the `.agent/rules/` directory for all agent-specific rules, behaviors, and standard operating procedures.
