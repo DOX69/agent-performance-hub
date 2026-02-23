@@ -1,44 +1,34 @@
 [
   {
-    "date": "2026-02-12",
-    "source": "Google DeepMind Blog",
-    "title": "Gemini 3.1 Unveiled: Infinite Context for Code",
-    "url": "https://blog.google/technology/ai/gemini-3-1-infinite-context",
-    "relevance": "High",
-    "summary": "Gemini 3.1 introduces a context window that scales indefinitely, allowing entire repositories to be loaded into memory without RAG."
+    "date": "2026-02-23",
+    "source": "Google AI Blog / Vertex AI Documentation",
+    "topic": "Gemini 3",
+    "highlights": [
+      "Gemini 3 Pro (preview) and Flash (preview) released late 2025.",
+      "Key Features: Deep Think (enhanced reasoning), Multimodal function responses, Streaming Function calling.",
+      "Agentic Capabilities: Native support for agentic coding and 'Google Antigravity' platform."
+    ],
+    "action_taken": "Updated methodology context; monitoring 'Antigravity' integration patterns."
   },
   {
-    "date": "2026-02-10",
-    "source": "Anthropic Research",
-    "title": "Claude 4 Beta: Enhanced Reasoning Capabilities",
-    "url": "https://www.anthropic.com/research/claude-4-beta",
-    "relevance": "High",
-    "summary": "Claude 4 Beta focuses on multi-step reasoning for complex refactoring tasks, reducing hallucinations by 40%."
+    "date": "2026-02-23",
+    "source": "Anthropic Research / Community",
+    "topic": "Claude Code & MCP",
+    "highlights": [
+      "Claude Code emphasizes 'Agentic Coding' where AI acts as a collaborator.",
+      "MCP (Model Context Protocol) is the standard for tool orchestration.",
+      "Best Practices: Use `CLAUDE.md` for global vs local rules to guide agent behavior."
+    ],
+    "action_taken": "Verified 'expert-skill-creator' aligns with Antigravity patterns."
   },
   {
-    "date": "2026-02-08",
-    "source": "Model Context Protocol",
-    "title": "MCP 1.5 Release",
-    "url": "https://modelcontextprotocol.io/blog/release-1-5",
-    "relevance": "Medium",
-    "summary": "MCP 1.5 adds support for streaming tool outputs and native file system watching."
-  },
-  {
-    "date": "2026-02-04",
-    "source": "Anthropic Research Blog",
-    "title": "Claude 3.7 Release Notes",
-    "url": "https://www.anthropic.com/news/claude-3-7",
-    "analysis": "Supports native mermaid graph rendering. Reduced tokens for visual outputs.",
-    "impact": "New Skill: Visualization",
-    "status": "Actioned"
-  },
-  {
-    "date": "2026-02-04",
-    "source": "Google DeepMind",
-    "title": "Gemini 3.1 Flash Updates",
-    "url": "https://blog.google/technology/ai/gemini-3-1-flash",
-    "analysis": "2M context window standard. Faster JSON mode.",
-    "impact": "Update Code Generation Skill",
-    "status": "Actioned"
+    "date": "2026-02-23",
+    "source": "Internal Request (Jules Weekly Watch)",
+    "topic": "New Skill: kubernetes-operator-dev",
+    "highlights": [
+      "Requested skill for building K8s operators.",
+      "Implemented support for Python (Kopf) and Go (Kubebuilder) patterns."
+    ],
+    "action_taken": "Created `.agent/skills/kubernetes-operator-dev`."
   }
 ]
