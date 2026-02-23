@@ -4,7 +4,7 @@
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
 ![Skills](https://img.shields.io/badge/Skills-241-blue)
 ![Status](https://img.shields.io/badge/Status-Private-orange)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--22-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--23-blue)
 ![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.3-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**
@@ -285,4 +285,4 @@ Private repository — access by invitation only.
 
 ---
 
-**Last updated**: 2026-02-16 | See [CHANGELOG.md](CHANGELOG.md) for version history.
+**Last updated**: 2026-02-23 | See [CHANGELOG.md](CHANGELOG.md) for version history.

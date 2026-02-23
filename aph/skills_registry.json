@@ -1,7 +1,7 @@
 {
-  "version": "0.1.0",
-  "generated": "2026-02-17",
-  "total_skills": 243,
+  "version": "0.1.4",
+  "generated": "2026-02-23",
+  "total_skills": 244,
   "core_skills": [
     "brainstorming",
     "clean-code",
@@ -20,7 +20,7 @@
     "integrations": 15,
     "marketing": 20,
     "methodology": 20,
-    "other": 77,
+    "other": 78,
     "security": 27,
     "tools": 18
   },
@@ -940,6 +940,22 @@
       "tags": [],
       "core": false,
       "size_kb": 17
+    },
+    {
+      "name": "kubernetes-operator-dev",
+      "description": "Expert in building Kubernetes Operators using Python (Kopf) and Go (Kubebuilder). Covers CRD design, reconciliation loops, event handling, and production deployment patterns.",
+      "category": "other",
+      "tags": [
+        "kubernetes",
+        "operator",
+        "python",
+        "go",
+        "kopf",
+        "kubebuilder",
+        "devops"
+      ],
+      "core": false,
+      "size_kb": 6
     },
     {
       "name": "langfuse",
