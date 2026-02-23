@@ -5,7 +5,7 @@
 ![Skills](https://img.shields.io/badge/Skills-241-blue)
 ![Status](https://img.shields.io/badge/Status-Private-orange)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--23-blue)
-![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.3-blue)
+![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.4-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**
 
