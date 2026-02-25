@@ -3,7 +3,7 @@
 ![Tests](https://img.shields.io/badge/Tests-124%20passed-brightgreen)
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
 ![Skills](https://img.shields.io/badge/Skills-241-blue)
-![Status](https://img.shields.io/badge/Status-Private-orange)
+![Status](https://img.shields.io/badge/Status-Public-green)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--23-blue)
 ![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.4-blue)
 
@@ -37,8 +37,6 @@ Install 241 skills for Gemini, Claude, and other AI agents — selectively, only
 
 ### 1. Install
 
-**Note:** Since this is a private package, you must configure authentication first.
-👉 **[Read the Setup Guide](docs/REGISTRY_SETUP.md)**
 
 ```bash
 # Recommended: Modern setup using 'uv'
@@ -48,7 +46,7 @@ uv venv .venv
 source .venv/bin/activate  # Windows: .venv/Scripts/activate
 
 # 2. Install APH CLI
-uv pip install aph-cli
+uv pip install "git+https://github.com/DOX69/agent-performance-hub.git@main"
 ```
 
 ### 2. Initialize your project
@@ -153,7 +151,7 @@ Browse all: `aph list` or `aph list --category <name>`
 
 ```bash
 # Update the aph-cli package itself
-uv pip install --upgrade aph-cli
+uv pip install --upgrade "git+https://github.com/DOX69/agent-performance-hub.git@main"
 
 # Update all installed skills in your project to latest
 aph update
@@ -167,14 +165,6 @@ aph update docker-expert
 - **Python 3.11+**
 - **Git**
 - **[uv](https://docs.astral.sh/uv/)** (Recommended for high performance)
-- **Access to this private repository**
-
-### Authentication (Private Repo)
-Since this is a private repo, you'll need to authenticate.
-- **HTTPS (Recommended)**: Use a GitHub Personal Access Token (PAT) or Git Credential Manager.
-- **SSH (Alternative)**: Ensure your SSH key is added to GitHub.
-- **HTTPS (Recommended)**: Use a GitHub Personal Access Token (PAT) or Git Credential Manager.
-- **SSH (Alternative)**: Ensure your SSH key is added to GitHub.
 
 ### 💡 Troubleshooting: "command not found"
 If `aph` is not recognized after installation:
@@ -182,16 +172,7 @@ If `aph` is not recognized after installation:
 2. **Fix your PATH**: Ensure your Python Scripts directory is in your system's `PATH`.
    - On Windows, it usually looks like: `%AppData%\Local\Packages\Python...\LocalCache\local-packages\Python311\Scripts`
 
-```bash
-# Check if you have an SSH key
-ls ~/.ssh/id_ed25519.pub
 
-# If not, generate one
-ssh-keygen -t ed25519 -C "your-email@example.com"
-
-# Add to GitHub: Settings → SSH and GPG keys → New SSH key
-cat ~/.ssh/id_ed25519.pub
-```
 
 ---
 
@@ -257,7 +238,6 @@ For deeper insights into the project, consult the following guides:
 | [SKILL_ANATOMY.md](docs/SKILL_ANATOMY.md) | Deep dive into the structure and elements of a standard skill |
 | [VISUAL_GUIDE.md](docs/VISUAL_GUIDE.md) | Visual representation of the repository, workflows, and skills |
 | [SETUP_SECRETS.md](docs/SETUP_SECRETS.md) | Guide to configuring API keys for workflows (e.g., Google Gemini) |
-| [REGISTRY_SETUP.md](docs/REGISTRY_SETUP.md) | Quick guide on authentication and connection to the GitHub package registry |
 
 ---
 
@@ -281,7 +261,7 @@ To collaborate, discuss new features, or request access, feel free to reach out:
 
 ## ⚖️ License
 
-Private repository — access by invitation only.
+MIT License
 
 ---
 

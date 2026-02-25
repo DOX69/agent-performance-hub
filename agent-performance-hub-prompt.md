@@ -22,7 +22,7 @@ Structurer, valider et améliorer continuellement les ressources dans le dossier
 
 ## 🧱 Contexte Technique Global
 
-- **Repo GitHub**: `agent-performance-hub` (privé, usage interne)
+- **Repo GitHub**: `agent-performance-hub` (public)
 - **IDE**:
   - VS Code (+ éventuels plugins type Cline/MCP)
   - Google Antigravity (latest)
@@ -851,7 +851,7 @@ examples/
 
 ## 🎯 Overview
 
-AGENT-PERFORMANCE-HUB est un dépôt privé structurant les ressources optimales 
+AGENT-PERFORMANCE-HUB est un dépôt public structurant les ressources optimales
 pour interagir avec Gemini 3 et Claude Opus/Sonnet via context engineering avancé.
 
 **Modèles cibles**: Gemini 3, Claude Opus, Claude Sonnet  
@@ -924,7 +924,7 @@ Sources surveillées:
 
 ## ⚖️ License
 
-Private repository — Internal use only.
+Public repository.
 
 ---
 
