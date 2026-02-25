@@ -17,7 +17,7 @@ To set up the skills in a new or existing project, use `uv` for a fast installat
     source .venv/bin/activate  # On Windows: .venv\Scripts\activate
     
     # Install the CLI tool
-    uv pip install aph-cli
+    uv pip install "git+https://github.com/DOX69/agent-performance-hub.git@main"
     
     # Initialize the basic skills framework
     aph init
