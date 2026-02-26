@@ -1,3 +1,4 @@
+import re
 """APH CLI — Main entry point for the Agent Performance Hub CLI.
 
 Commands:
@@ -92,7 +93,8 @@ def version():
     EXIT_CODES:
     0 = Success
     """
-    console.print(f"[bold cyan]aph[/] v{__version__}")
+    clean_version = re.sub(r"(\.dev.*|\+.*)$", "", __version__)
+    console.print(f"[bold cyan]aph[/] v{clean_version}")
 
 
 # ─── aph init ─────────────────────────────────────────────────────────────────
@@ -570,4 +572,3 @@ def info(skill_name):
 
 if __name__ == "__main__":
     main()
-

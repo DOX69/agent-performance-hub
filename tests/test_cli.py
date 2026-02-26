@@ -41,8 +41,9 @@ class TestVersion:
         monkeypatch.setattr(cli, "__version__", "0.1.dev38+gf54a9888e.d20260223")
         result = runner.invoke(main, ["version"])
         assert result.exit_code == 0
-        assert "aph v0.1.dev38+gf54a9888e.d20260223" in result.output
-        assert re.search(r"dev\d+\+g[a-f0-9]+", result.output)
+        # Should strip dev suffix and show base version
+        assert "aph v0.1" in result.output
+        assert "dev38" not in result.output
 
 
 class TestHelp:
