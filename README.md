@@ -2,14 +2,14 @@
 
 ![Tests](https://img.shields.io/badge/Tests-124%20passed-brightgreen)
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
-![Skills](https://img.shields.io/badge/Skills-241-blue)
+![Skills](https://img.shields.io/badge/Skills-245-blue)
 ![Status](https://img.shields.io/badge/Status-Public-green)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--02--23-blue)
-![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.4-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--02-blue)
+![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.5-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**
 
-Install 241 skills for Gemini, Claude, and other AI agents — selectively, only what you need.
+Install 245 skills for Gemini, Claude, and other AI agents — selectively, only what you need.
 
 ---
 
@@ -61,7 +61,7 @@ This creates `.agent/` with **6 core skills**: brainstorming, git-pushing, exper
 ### 3. Add skills you need
 
 ```bash
-aph list                      # Browse all 241 skills
+aph list                      # Browse all 245 skills
 aph search docker             # Search by keyword
 aph add docker-expert         # Install a skill
 ```
@@ -74,7 +74,7 @@ aph add docker-expert         # Install a skill
 |---------|-------------|
 | `aph init` | Initialize `.agent/` with core skills |
 | `aph init --skills a,b,c` | Initialize with custom skill set |
-| `aph list` | List all available skills (241) |
+| `aph list` | List all available skills (245) |
 | `aph list --installed` | Show only installed skills |
 | `aph list --category security` | Filter by category |
 | `aph search <query>` | Search by name, description, or tags |
@@ -243,7 +243,7 @@ For deeper insights into the project, consult the following guides:
 
 ## 📊 Metrics
 
-- **241 skills** across 11 categories
+- **245 skills** across 11 categories
 - **124 tests** with 100% pass rate
 - **Token Efficiency**: 67.7% reduction vs baseline
 - **Agent Autonomy**: 84%
@@ -265,4 +265,4 @@ MIT License
 
 ---
 
-**Last updated**: 2026-02-23 | See [CHANGELOG.md](CHANGELOG.md) for version history.
+**Last updated**: 2026-03-02 | See [CHANGELOG.md](CHANGELOG.md) for version history.
