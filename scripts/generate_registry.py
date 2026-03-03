@@ -231,7 +231,7 @@ def main():
 
     # Build registry
     registry = {
-        "version": "0.1.4",
+        "version": "0.1.5",
         "generated": datetime.now().strftime("%Y-%m-%d"),
         "total_skills": len(skills),
         "core_skills": [s["name"] for s in skills if s["core"]],
@@ -244,7 +244,26 @@ def main():
         json.dumps(registry, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
+
+    # Also write to repo root to maintain package integrity (as requested by team conventions/memory)
+    ROOT_OUTPUT = REPO_ROOT / "skills_registry.json"
+    ROOT_OUTPUT.write_text(
+        json.dumps(registry, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    # Also write to aph/bundled/
+    BUNDLED_DIR = REPO_ROOT / "aph" / "bundled"
+    if BUNDLED_DIR.exists():
+        BUNDLED_OUTPUT = BUNDLED_DIR / "skills_registry.json"
+        BUNDLED_OUTPUT.write_text(
+            json.dumps(registry, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        print(f"✅ Registry written to {BUNDLED_OUTPUT}")
+
     print(f"\n✅ Registry written to {OUTPUT_FILE}")
+    print(f"✅ Registry written to {ROOT_OUTPUT}")
     print(f"   Total: {len(skills)} skills, {len(categories)} categories")
 
 
