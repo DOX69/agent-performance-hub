@@ -11,6 +11,9 @@
 ### 1. Source Monitoring
 You must actively check the following sources for updates related to **Gemini 3**, **Claude Sonnet/Opus**, **MCP**, and **Agentic Coding**:
 - **Claude Code Skills**: [claude-code-skills](https://github.com/QuestForTech-Investments/claude-code-skills) (Critical source for professional-grade skills).
+- **NotebookLM Python API**: [notebooklm-py](https://github.com/teng-lin/notebooklm-py) (Source for notebookLM interaction).
+- **NotebookLM Skill**: [notebooklm-skill](https://github.com/PleasePrompto/notebooklm-skill) (Source for notebookLM integration).
+- **Databricks AI Dev Kit**: [ai-dev-kit](https://github.com/databricks-solutions/ai-dev-kit) (Source for Databricks skills).
 - **Official Blogs**: Anthropic Research, Google DeepMind / AI.
 - **GitHub Trending**: Repositories like `cline`, `antigravity`, `langchain`, `semantic-kernel`.
 - **Awesome Skills**: [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) (Critical source for continuous improvement).
