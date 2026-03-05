@@ -72,9 +72,11 @@ CATEGORY_PATTERNS = {
         "code-review", "architecture", "clean-code", "verification",
         "kaizen", "lint", "performance-profiling",
     ],
+    "data-platform": [
+        "databricks", "snowflake", "firebase", "supabase", "clickhouse", "neon-postgres",
+    ],
     "data": [
-        "database", "clickhouse", "nosql", "neon-postgres",
-        "supabase", "firebase",
+        "database", "nosql", "data-engineering",
     ],
     "marketing": [
         "seo", "content", "copywriting", "email", "analytics",
