@@ -1,7 +1,7 @@
 {
-  "version": "0.1.6",
+  "version": "0.1.7",
   "generated": "2026-03-16",
-  "total_skills": 273,
+  "total_skills": 274,
   "core_skills": [
     "brainstorming",
     "clean-code",
@@ -16,7 +16,7 @@
     "backend": 8,
     "data": 2,
     "data-platform": 28,
-    "devops": 8,
+    "devops": 9,
     "frontend": 16,
     "integrations": 15,
     "marketing": 20,
@@ -593,6 +593,21 @@
       "tags": [],
       "core": false,
       "size_kb": 4
+    },
+    {
+      "name": "cost-optimization",
+      "description": "Expert patterns and strategies for optimizing cloud costs and resource management. Use when analyzing cloud spend, rightsizing instances, implementing spot instances, or designing cost-effective ar...",
+      "category": "devops",
+      "tags": [
+        "cost-optimization",
+        "cloud",
+        "aws",
+        "azure",
+        "gcp",
+        "finops"
+      ],
+      "core": false,
+      "size_kb": 2
     },
     {
       "name": "crewai",

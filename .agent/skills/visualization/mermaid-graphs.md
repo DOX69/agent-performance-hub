@@ -3,6 +3,8 @@
 ## 🎯 Purpose
 Leverage Claude 3.7's native rendering capabilities to visualize complex systems, flows, and architectures.
 
+**New in 2026-W06**: Claude 3.7 now natively supports rendering Mermaid graphs in chat interfaces, making architectural and data flow diagrams much more accessible and interactive for users without external plugins.
+
 ## 🛠️ Usage
 Request the model to "Visualize X using Mermaid".
 
