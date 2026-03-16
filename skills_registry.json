@@ -1,6 +1,6 @@
 {
-  "version": "0.1.5",
-  "generated": "2026-03-05",
+  "version": "0.1.6",
+  "generated": "2026-03-16",
   "total_skills": 272,
   "core_skills": [
     "brainstorming",
@@ -608,7 +608,7 @@
       "category": "data",
       "tags": [],
       "core": false,
-      "size_kb": 13
+      "size_kb": 12
     },
     {
       "name": "databricks-agent-bricks",
@@ -616,7 +616,7 @@
       "category": "ai-agents",
       "tags": [],
       "core": false,
-      "size_kb": 29
+      "size_kb": 28
     },
     {
       "name": "databricks-aibi-dashboards",
@@ -624,7 +624,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 33
+      "size_kb": 32
     },
     {
       "name": "databricks-app-apx",
@@ -632,7 +632,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 32
+      "size_kb": 31
     },
     {
       "name": "databricks-app-python",
@@ -640,7 +640,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 36
+      "size_kb": 35
     },
     {
       "name": "databricks-asset-bundles",
@@ -664,7 +664,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 157
+      "size_kb": 153
     },
     {
       "name": "databricks-docs",
@@ -680,7 +680,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 17
+      "size_kb": 16
     },
     {
       "name": "databricks-iceberg",
@@ -688,7 +688,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 52
+      "size_kb": 51
     },
     {
       "name": "databricks-jobs",
@@ -696,7 +696,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 68
+      "size_kb": 65
     },
     {
       "name": "databricks-lakebase-autoscale",
@@ -704,7 +704,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 44
+      "size_kb": 42
     },
     {
       "name": "databricks-lakebase-provisioned",
@@ -712,7 +712,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 25
+      "size_kb": 24
     },
     {
       "name": "databricks-metric-views",
@@ -720,7 +720,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 34
+      "size_kb": 33
     },
     {
       "name": "databricks-mlflow-evaluation",
@@ -728,7 +728,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 215
+      "size_kb": 208
     },
     {
       "name": "databricks-model-serving",
@@ -736,7 +736,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 65
+      "size_kb": 62
     },
     {
       "name": "databricks-parsing",
@@ -744,7 +744,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 10
+      "size_kb": 9
     },
     {
       "name": "databricks-python-sdk",
@@ -752,7 +752,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 60
+      "size_kb": 58
     },
     {
       "name": "databricks-spark-declarative-pipelines",
@@ -760,7 +760,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 138
+      "size_kb": 134
     },
     {
       "name": "databricks-spark-structured-streaming",
@@ -768,7 +768,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 111
+      "size_kb": 107
     },
     {
       "name": "databricks-synthetic-data-gen",
@@ -776,7 +776,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 71
+      "size_kb": 69
     },
     {
       "name": "databricks-unity-catalog",
@@ -784,7 +784,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 49
+      "size_kb": 47
     },
     {
       "name": "databricks-unstructured-pdf-generation",
@@ -800,7 +800,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 25
+      "size_kb": 24
     },
     {
       "name": "databricks-zerobus-ingest",
@@ -808,7 +808,7 @@
       "category": "data-platform",
       "tags": [],
       "core": false,
-      "size_kb": 49
+      "size_kb": 47
     },
     {
       "name": "deployment-procedures",
@@ -1356,7 +1356,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 266
+      "size_kb": 262
     },
     {
       "name": "notebooklm-cli",
@@ -1364,7 +1364,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 25
+      "size_kb": 24
     },
     {
       "name": "notion-template-business",
@@ -1876,7 +1876,7 @@
       "category": "other",
       "tags": [],
       "core": false,
-      "size_kb": 95
+      "size_kb": 92
     },
     {
       "name": "sql-expert",
