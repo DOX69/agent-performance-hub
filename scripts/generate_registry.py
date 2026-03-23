@@ -233,7 +233,7 @@ def main():
 
     # Build registry
     registry = {
-        "version": "0.1.6",
+        "version": "0.1.7",
         "generated": datetime.now().strftime("%Y-%m-%d"),
         "total_skills": len(skills),
         "core_skills": [s["name"] for s in skills if s["core"]],
