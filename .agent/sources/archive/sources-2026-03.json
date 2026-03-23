@@ -7,5 +7,14 @@
     "analysis": "Identified 'api-design-principles' skill in Claude Code Skills repository. Covers REST and GraphQL API design best practices, an important addition to the registry.",
     "impact": "New Skill: api-design-principles",
     "status": "Actioned"
+  },
+  {
+    "date": "2026-03-23",
+    "source": "Official Blogs",
+    "title": "Gemini 3.1 Capabilities",
+    "url": "https://blog.google/technology/ai/gemini-3-1-flash",
+    "analysis": "Identified Gemini 3.1 2M context window. New capability to load entire codebases.",
+    "impact": "New Feature: gemini-3-1-capabilities",
+    "status": "Actioned"
   }
 ]

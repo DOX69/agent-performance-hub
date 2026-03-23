@@ -2,14 +2,14 @@
 
 ![Tests](https://img.shields.io/badge/Tests-124%20passed-brightgreen)
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
-![Skills](https://img.shields.io/badge/Skills-272-blue)
+![Skills](https://img.shields.io/badge/Skills-274-blue)
 ![Status](https://img.shields.io/badge/Status-Public-green)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--09-blue)
-![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.6-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--23-blue)
+![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.7-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**
 
-Install 272 skills for Gemini, Claude, and other AI agents — selectively, only what you need.
+Install 274 skills for Gemini, Claude, and other AI agents — selectively, only what you need.
 
 ---
 
