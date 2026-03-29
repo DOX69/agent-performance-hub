@@ -2,14 +2,14 @@
 
 ![Tests](https://img.shields.io/badge/Tests-124%20passed-brightgreen)
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
-![Skills](https://img.shields.io/badge/Skills-274-blue)
+![Skills](https://img.shields.io/badge/Skills-275-blue)
 ![Status](https://img.shields.io/badge/Status-Public-green)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--23-blue)
-![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.7-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--29-blue)
+![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.8-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**
 
-Install 274 skills for Gemini, Claude, and other AI agents — selectively, only what you need.
+Install 275 skills for Gemini, Claude, and other AI agents
 
 ---
 
@@ -61,7 +61,7 @@ This creates `.agent/` with **6 core skills**: brainstorming, git-pushing, exper
 ### 3. Add skills you need
 
 ```bash
-aph list                      # Browse all 272 skills
+aph list                      # Browse all 275 skills
 aph search docker             # Search by keyword
 aph add docker-expert         # Install a skill
 ```
@@ -74,7 +74,7 @@ aph add docker-expert         # Install a skill
 |---------|-------------|
 | `aph init` | Initialize `.agent/` with core skills |
 | `aph init --skills a,b,c` | Initialize with custom skill set |
-| `aph list` | List all available skills (272) |
+| `aph list` | List all available skills (275) |
 | `aph list --installed` | Show only installed skills |
 | `aph list --category security` | Filter by category |
 | `aph search <query>` | Search by name, description, or tags |
@@ -243,7 +243,7 @@ For deeper insights into the project, consult the following guides:
 
 ## 📊 Metrics
 
-- **272 skills** across 12 categories
+- **275 skills** across 12 categories
 - **124 tests** with 100% pass rate
 - **Token Efficiency**: 67.7% reduction vs baseline
 - **Agent Autonomy**: 84%
@@ -265,4 +265,4 @@ MIT License
 
 ---
 
-**Last updated**: 2026-03-09 | See [CHANGELOG.md](CHANGELOG.md) for version history.
+**Last updated**: 2026-03-29 | See [CHANGELOG.md](CHANGELOG.md) for version history.
