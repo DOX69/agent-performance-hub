@@ -8,14 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 _Empty_
 
-## [0.1.7] - 2026-03-16
+## [0.1.8] - 2026-03-29
 ### Added
 - **Skill Enrichment**: Added `cost-optimization` skill ported from `claude-code-skills`.
 - **Capability Updates**: Updated `mermaid-graphs.md` to reflect Claude 3.7's native Mermaid rendering capabilities.
 
 ### Changed
-- Updated `skills_registry.json` (now contains 274 skills).
+- Updated `skills_registry.json` (now contains 275 skills).
 - Bumps project version and updates README badges.
+
+## [0.1.7] - 2026-03-16
+### Added
+- **Skill Enrichment**: Added `gemini-3-1-capabilities` skill.
 
 ## [0.1.3] - 2026-02-22
 ### Added
