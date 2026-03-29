@@ -4,7 +4,7 @@
 ![Token Efficiency](https://img.shields.io/badge/Token%20Efficiency-67.7%25-green)
 ![Skills](https://img.shields.io/badge/Skills-274-blue)
 ![Status](https://img.shields.io/badge/Status-Public-green)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--16-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--23-blue)
 ![Lastest version](https://img.shields.io/badge/Latest%20version-v0.1.7-blue)
 
 **A CLI tool for managing curated AI agent skills across all your projects.**

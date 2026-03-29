@@ -1,6 +1,6 @@
 {
   "version": "0.1.7",
-  "generated": "2026-03-16",
+  "generated": "2026-03-23",
   "total_skills": 274,
   "core_skills": [
     "brainstorming",
@@ -21,7 +21,7 @@
     "integrations": 15,
     "marketing": 20,
     "methodology": 20,
-    "other": 82,
+    "other": 83,
     "security": 27,
     "tools": 18
   },
@@ -1052,6 +1052,17 @@
       "tags": [],
       "core": false,
       "size_kb": 6
+    },
+    {
+      "name": "gemini-3-1-capabilities",
+      "description": "Gemini 3.1 Flash capabilities including the 2M Context Window.",
+      "category": "other",
+      "tags": [
+        "gemini",
+        "code-generation"
+      ],
+      "core": false,
+      "size_kb": 1
     },
     {
       "name": "geo-fundamentals",
