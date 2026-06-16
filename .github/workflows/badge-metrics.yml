@@ -2,7 +2,7 @@ name: Token Metrics & Badge Update
 
 on:
   schedule:
-    - cron: '0 10 * * 1'  # Lundi 10h UTC
+    # - cron: '0 10 * * 1'  # Lundi 10h UTC
   workflow_dispatch:
 
 jobs:
